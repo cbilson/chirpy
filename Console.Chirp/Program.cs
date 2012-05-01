@@ -41,9 +41,10 @@ namespace Console.Chirp
                     System.Console.WriteLine(string.Format("ConfigEngine -- {0}", filename));
                     configEngine.Run(filename, null);
                 }
-                catch (System.IO.FileNotFoundException)
+                catch (System.IO.FileNotFoundException ex)
                 {
-                    System.Console.WriteLine(string.Format("File not found in config file={0}", filename));
+                    System.Console.WriteLine(string.Format("File not found in config file={0}, \nfile in error={1}", filename, ex.FileName));
+                    System.Environment.Exit(-1);
                 }
             }
         }
