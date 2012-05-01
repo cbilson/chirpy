@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{920DFF1F-FC54-475B-8112-FB1DD32718FF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>TempChirpy</AssemblyName>
+    <RootNamespace>Zippy.Chirp</RootNamespace>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'" />
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <IncrementalBuild>false</IncrementalBuild>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <IncrementalBuild>false</IncrementalBuild>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DebugType>pdbonly</DebugType>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxMin, Version=4.48.4489.28432, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\AjaxMin.4.48.4489.28432\lib\net20\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="dotless.Core, Version=1.3.0.0, Culture=neutral, PublicKeyToken=96b446c9e63eae34, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\dotless.1.3.0.0\lib\dotless.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EcmaScript.NET.modified, Version=0.1.1.0, Culture=neutral, PublicKeyToken=7d53ba4f537753a5, processorArchitecture=MSIL">
+      <HintPath>packages\YUICompressor.NET.1.7.1.0\lib\net35\EcmaScript.NET.modified.dll</HintPath>
+    </Reference>
+    <Reference Include="Extensibility, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="IronRuby, Version=1.1.3.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>packages\IronRuby.1.1.3\Lib\IronRuby.dll</HintPath>
+    </Reference>
+    <Reference Include="IronRuby.Libraries, Version=1.1.3.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>packages\IronRuby.1.1.3\Lib\IronRuby.Libraries.dll</HintPath>
+    </Reference>
+    <Reference Include="IronRuby.Libraries.Yaml, Version=1.1.3.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>packages\IronRuby.1.1.3\Lib\IronRuby.Libraries.Yaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Jurassic">
+      <HintPath>packages\Jurassic.2.1.1\lib\Jurassic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dynamic, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>packages\IronRuby.1.1.3\Lib\Microsoft.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>packages\IronRuby.1.1.3\Lib\Microsoft.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.Metadata, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>packages\IronRuby.1.1.3\Lib\Microsoft.Scripting.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="SassAndCoffee.Core">
+      <HintPath>Lib\SassAndCoffee.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VSLangProj, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Yahoo.Yui.Compressor, Version=1.7.1.0, Culture=neutral, PublicKeyToken=f8b4b81ec75097e2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\YUICompressor.NET.1.7.1.0\lib\net35\Yahoo.Yui.Compressor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chirp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommandHelper.cs" />
+    <Compile Include="ConfigurationScreen\BaseConfigurationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationScreen\CoffeeScript.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationScreen\CoffeeScript.Designer.cs">
+      <DependentUpon>CoffeeScript.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationScreen\About.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationScreen\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationScreen\DeanEdwardsPacker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationScreen\DeanEdwardsPacker.Designer.cs">
+      <DependentUpon>DeanEdwardsPacker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationScreen\Sass.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationScreen\Sass.Designer.cs">
+      <DependentUpon>Sass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationScreen\CssLint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationScreen\CssLint.Designer.cs">
+      <DependentUpon>CssLint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationScreen\GoogleClosure.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationScreen\GoogleClosure.Designer.cs">
+      <DependentUpon>GoogleClosure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationScreen\JSHint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationScreen\JSHint.Designer.cs">
+      <DependentUpon>JSHint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationScreen\MsCss.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationScreen\MsCss.Designer.cs">
+      <DependentUpon>MsCss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationScreen\MsJs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationScreen\MsJs.Designer.cs">
+      <DependentUpon>MsJs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationScreen\YuiCss.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationScreen\YuiCss.Designer.cs">
+      <DependentUpon>YuiCss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationScreen\YuiJs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationScreen\YuiJs.Designer.cs">
+      <DependentUpon>YuiJs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Engines\ClosureCompilerCompressMode.cs" />
+    <Compile Include="ConfigurationScreen\Css.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationScreen\Css.Designer.cs">
+      <DependentUpon>Css.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationScreen\Config.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationScreen\Config.Designer.cs">
+      <DependentUpon>Config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationScreen\Javascript.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationScreen\Javascript.Designer.cs">
+      <DependentUpon>Javascript.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationScreen\Less.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationScreen\Less.Designer.cs">
+      <DependentUpon>Less.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationScreen\T4Template.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationScreen\T4Template.Designer.cs">
+      <DependentUpon>T4Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EcmaScriptErrorReporter.cs" />
+    <Compile Include="Engines\ClosureCompilerEngine.cs" />
+    <Compile Include="Engines\CoffeeScriptEngine.cs" />
+    <Compile Include="Engines\ConfigEngine.cs" />
+    <Compile Include="Engines\DeanEdwardsPackerEngine.cs" />
+    <Compile Include="Engines\SassEngine.cs" />
+    <Compile Include="Engines\EnvironmentDirectory.cs" />
+    <Compile Include="Engines\GoogleClosureOfflineCompiler.cs" />
+    <Compile Include="Engines\ImageSprite.cs" />
+    <Compile Include="Engines\MsCssEngine.cs" />
+    <Compile Include="Engines\MsJsEngine.cs" />
+    <Compile Include="Engines\ServicePool.cs" />
+    <Compile Include="Engines\ServiceQueue.cs" />
+    <Compile Include="Engines\UglifyEngine.cs" />
+    <Compile Include="Engines\YuiCssEngine.cs" />
+    <Compile Include="Engines\Engine.cs" />
+    <Compile Include="Engines\LessEngine.cs" />
+    <Compile Include="Engines\T4Engine.cs" />
+    <Compile Include="Engines\ViewEngine.cs" />
+    <Compile Include="Engines\YuiJsEngine.cs" />
+    <Compile Include="Engines\GoogleClosureCompilerErrorException.cs" />
+    <Compile Include="Engines\GoogleClosureCompiler.cs" />
+    <Compile Include="JavaScript\Beautify.cs" />
+    <Compile Include="JavaScript\CoffeeScript.cs" />
+    <Compile Include="JavaScript\CSSLint.cs" />
+    <Compile Include="JavaScript\Environment.cs" />
+    <Compile Include="JavaScript\Extensibility.cs" />
+    <Compile Include="JavaScript\JavaScript.cs" />
+    <Compile Include="JavaScript\JsHint.cs" />
+    <Compile Include="JavaScript\Uglify.cs" />
+    <Compile Include="Manager\VSProjectItemManager.cs" />
+    <Compile Include="packer2\ECMAScriptPacker.cs" />
+    <Compile Include="packer2\ParseMaster.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="TaskList.cs" />
+    <Compile Include="Utilities.cs" />
+    <Compile Include="Xml\FileGroupXml.cs" />
+    <Compile Include="Xml\FileXml.cs" />
+    <Compile Include="Xml\FolderXml.cs" />
+    <Compile Include="Xml\MinifyType.cs" />
+    <Compile Include="Yui\CssSettings.cs" />
+    <Compile Include="Yui\JsSettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="EnvDTE">
+      <Guid>{80CC9F66-E7D8-4DDD-85B6-D9E6CD0E93E2}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="EnvDTE80">
+      <Guid>{1A31287A-4D7D-413E-8E32-3B374931BD89}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="EnvDTE90">
+      <Guid>{2CE2370E-D744-4936-A090-3FFFE667B0E1}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.VisualStudio.CommandBars">
+      <Guid>{1CBA492E-7263-47BB-87FE-639000619B15}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="ConfigurationScreen\CoffeeScript.resx">
+      <DependentUpon>CoffeeScript.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationScreen\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationScreen\DeanEdwardsPacker.resx">
+      <DependentUpon>DeanEdwardsPacker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationScreen\Sass.resx">
+      <DependentUpon>Sass.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationScreen\Css.resx">
+      <DependentUpon>Css.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationScreen\Config.resx">
+      <DependentUpon>Config.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationScreen\CssLint.resx">
+      <DependentUpon>CssLint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationScreen\GoogleClosure.resx">
+      <DependentUpon>GoogleClosure.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationScreen\Javascript.resx">
+      <DependentUpon>Javascript.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationScreen\JSHint.resx">
+      <DependentUpon>JSHint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationScreen\Less.resx">
+      <DependentUpon>Less.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationScreen\MsCss.resx">
+      <DependentUpon>MsCss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationScreen\MsJs.resx">
+      <DependentUpon>MsJs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationScreen\T4Template.resx">
+      <DependentUpon>T4Template.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationScreen\YuiCss.resx">
+      <DependentUpon>YuiCss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationScreen\YuiJs.resx">
+      <DependentUpon>YuiJs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Xml\Chirpy.Config.xsc">
+      <DependentUpon>Chirpy.Config.xsd</DependentUpon>
+    </None>
+    <None Include="Xml\Chirpy.Config.xsd" />
+    <None Include="Xml\Chirpy.Config.xss">
+      <DependentUpon>Chirpy.Config.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="JavaScript\Scripts\beautify.js" />
+    <Content Include="JavaScript\Scripts\browser.js" />
+    <Content Include="JavaScript\Scripts\coffee-script.js" />
+    <Content Include="JavaScript\Scripts\csslint.js" />
+    <Content Include="JavaScript\Scripts\env.js" />
+    <Content Include="JavaScript\Scripts\jshint.js" />
+    <Content Include="JavaScript\Scripts\parse-js.js" />
+    <Content Include="JavaScript\Scripts\process.js" />
+    <Content Include="JavaScript\Scripts\squeeze-more.js" />
+    <Content Include="JavaScript\Scripts\uglify-js.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+  <PropertyGroup>
+    <PreBuildEvent>del "$(ProjectDir)$(OutDir)Chirpy.vsi"</PreBuildEvent>
+    <PostBuildEvent>$(ProjectDir)$(OutDir)\postBuild.bat</PostBuildEvent>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" />
+</Project>

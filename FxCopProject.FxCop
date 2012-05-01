@@ -1,0 +1,3429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FxCopProject Version="1.36" Name="My FxCop Project">
+ <ProjectOptions>
+  <SharedProject>True</SharedProject>
+  <Stylesheet Apply="False">c:\program files\microsoft fxcop 1.36\Xml\FxCopReport.xsl</Stylesheet>
+  <SaveMessages>
+   <Project Status="Active, Excluded" NewOnly="False" />
+   <Report Status="Active" NewOnly="False" />
+  </SaveMessages>
+  <ProjectFile Compress="True" DefaultTargetCheck="True" DefaultRuleCheck="True" SaveByRuleGroup="" Deterministic="True" />
+  <EnableMultithreadedLoad>True</EnableMultithreadedLoad>
+  <EnableMultithreadedAnalysis>True</EnableMultithreadedAnalysis>
+  <SourceLookup>True</SourceLookup>
+  <AnalysisExceptionsThreshold>10</AnalysisExceptionsThreshold>
+  <RuleExceptionsThreshold>1</RuleExceptionsThreshold>
+  <Spelling Locale="en-US" />
+  <OverrideRuleVisibilities>False</OverrideRuleVisibilities>
+  <CustomDictionaries SearchFxCopDir="True" SearchUserProfile="True" SearchProjectDir="True" />
+  <SearchGlobalAssemblyCache>False</SearchGlobalAssemblyCache>
+  <DeadlockDetectionTimeout>120</DeadlockDetectionTimeout>
+  <IgnoreGeneratedCode>False</IgnoreGeneratedCode>
+ </ProjectOptions>
+ <Targets>
+  <AssemblyReferenceDirectories>
+   <Directory>$(ProjectDir)/../../Program Files/Common Files/microsoft shared/MSEnv/PublicAssemblies/</Directory>
+   <Directory>$(ProjectDir)/../../Windows/assembly/GAC/Microsoft.VisualStudio.OLE.Interop/7.1.40304.0__b03f5f7f11d50a3a/</Directory>
+   <Directory>$(ProjectDir)/../../Windows/assembly/GAC/Microsoft.VisualStudio.Shell.Interop.8.0/8.0.0.0__b03f5f7f11d50a3a/</Directory>
+   <Directory>$(ProjectDir)/../../Windows/assembly/GAC/Microsoft.VisualStudio.Shell.Interop/7.1.40304.0__b03f5f7f11d50a3a/</Directory>
+   <Directory>$(ProjectDir)/../../Windows/assembly/GAC_MSIL/Microsoft.VisualStudio.Shell/2.0.0.0__b03f5f7f11d50a3a/</Directory>
+  </AssemblyReferenceDirectories>
+  <Target Name="$(ProjectDir)/bin/TempChirpy.dll" Analyze="True" AnalyzeAllChildren="True" />
+ </Targets>
+ <Rules>
+  <RuleFiles>
+   <RuleFile Name="$(FxCopDir)\Rules\DesignRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\GlobalizationRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\InteroperabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\MobilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\NamingRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PerformanceRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PortabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\UsageRules.dll" Enabled="True" AllRulesEnabled="True" />
+  </RuleFiles>
+  <Groups />
+  <Settings />
+ </Rules>
+ <FxCopReport Version="1.36">
+  <Namespaces>
+   <Namespace Name="Zippy.Chirp.Manager">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2011-03-20 16:07:37Z">
+      <Issue>
+       <Item>Zippy.Chirp.Manager</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="Zippy.Chirp.Threading">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2011-03-20 16:07:37Z">
+      <Issue>
+       <Item>Zippy.Chirp.Threading</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="Zippy.Chirp.Xml">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2011-03-20 16:07:37Z">
+      <Issue>
+       <Item>Zippy.Chirp.Xml</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+  </Namespaces>
+  <Targets>
+   <Target Name="$(ProjectDir)/bin/TempChirpy.dll">
+    <Modules>
+     <Module Name="tempchirpy.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2011-03-20 16:07:37Z">
+        <Issue Name="NoStrongName">
+         <Item>'TempChirpy.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2011-03-20 16:07:37Z">
+        <Issue>
+         <Item>'TempChirpy.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithComVisible" Category="Microsoft.Design" CheckId="CA1017" Created="2011-03-20 16:07:37Z">
+        <Issue Name="AttributeTrue" Level="Error">
+         <Item>'TempChirpy.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="Zippy.Chirp">
+        <Types>
+         <Type Name="Chirp">
+          <Messages>
+           <Message TypeName="TypeNamesShouldNotMatchNamespaces" Category="Microsoft.Naming" CheckId="CA1724" Created="2011-03-20 16:07:37Z">
+            <Issue>
+             <Item>'Chirp'</Item>
+             <Item>Zippy.Chirp</Item>
+            </Issue>
+           </Message>
+           <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Created="2011-03-20 16:07:37Z" FixCategory="DependsOnFix">
+            <Issue Name="DependsOnFix">
+             <Item>'Chirp'</Item>
+             <Item>'EngineManager', 'TaskList'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#ClosureCompilerEngine">
+            <Accessors>
+             <Accessor Name="#get_ClosureCompilerEngine()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2011-03-20 16:07:37Z">
+                <Issue>
+                 <Item>'Chirp.ClosureCompilerEngine.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#CoffeeScriptEngine">
+            <Accessors>
+             <Accessor Name="#get_CoffeeScriptEngine()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2011-03-20 16:07:37Z">
+                <Issue>
+                 <Item>'Chirp.CoffeeScriptEngine.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#DocumentEvents_DocumentSaved(EnvDTE.Document)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Chirp.DocumentEvents_DocumentSaved(Document)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#eventsOnBuild">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Chirp.eventsOnBuild'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#instance">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Chirp.instance'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#JSHintEngine">
+            <Accessors>
+             <Accessor Name="#get_JSHintEngine()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2011-03-20 16:07:37Z">
+                <Issue>
+                 <Item>'Chirp.JSHintEngine.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#LessEngine">
+            <Accessors>
+             <Accessor Name="#get_LessEngine()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2011-03-20 16:07:37Z">
+                <Issue>
+                 <Item>'Chirp.LessEngine.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#MsCssEngine">
+            <Accessors>
+             <Accessor Name="#get_MsCssEngine()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2011-03-20 16:07:37Z">
+                <Issue>
+                 <Item>'Chirp.MsCssEngine.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#MsJsEngine">
+            <Accessors>
+             <Accessor Name="#get_MsJsEngine()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2011-03-20 16:07:37Z">
+                <Issue>
+                 <Item>'Chirp.MsJsEngine.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#OnConnection(System.Object,Extensibility.ext_ConnectMode,System.Object,System.Array&amp;)">
+            <Messages>
+             <Message Id="0#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Chirp.OnConnection(object, ext_ConnectMode, object, ref Array)'</Item>
+               <Item>'application'</Item>
+               <Item>'Application'</Item>
+               <Item>'IDTExtensibility2.OnConnection(object, ext_ConnectMode, object, ref Array)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Chirp.OnConnection(object, ext_ConnectMode, object, ref Array)'</Item>
+               <Item>'connectMode'</Item>
+               <Item>'ConnectMode'</Item>
+               <Item>'IDTExtensibility2.OnConnection(object, ext_ConnectMode, object, ref Array)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Chirp.OnConnection(object, ext_ConnectMode, object, ref Array)'</Item>
+               <Item>'addInInst'</Item>
+               <Item>'AddInInst'</Item>
+               <Item>'IDTExtensibility2.OnConnection(object, ext_ConnectMode, object, ref Array)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnDisconnection(Extensibility.ext_DisconnectMode,System.Array&amp;)">
+            <Messages>
+             <Message Id="0#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Chirp.OnDisconnection(ext_DisconnectMode, ref Array)'</Item>
+               <Item>'disconnectMode'</Item>
+               <Item>'RemoveMode'</Item>
+               <Item>'IDTExtensibility2.OnDisconnection(ext_DisconnectMode, ref Array)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnStartupComplete(System.Array&amp;)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Chirp.OnStartupComplete(ref Array)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OutputWindowPane">
+            <Messages>
+             <Message Id="WindowPane" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Created="2011-03-20 16:07:37Z">
+              <Issue Name="MemberShouldBeDiscreteTerm">
+               <Item>WindowPane</Item>
+               <Item>'Chirp.OutputWindowPane'</Item>
+               <Item>Windowpane</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OutputWindowWriteText(System.String)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Chirp.OutputWindowWriteText(string)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Chirp.OutputWindowWriteText(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ProjectItemsEvents_ItemAdded(EnvDTE.ProjectItem)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Chirp.ProjectItemsEvents_ItemAdded(ProjectItem)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ProjectItemsEvents_ItemRenamed(EnvDTE.ProjectItem,System.String)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Chirp.ProjectItemsEvents_ItemRenamed(ProjectItem, string)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SolutionEvents_Opened()">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Chirp.SolutionEvents_Opened()'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#TreatLessAsCss(System.Boolean)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Chirp.TreatLessAsCss(bool)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'string.Format(string, object)'</Item>
+               <Item>'Chirp.TreatLessAsCss(bool)'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#UglifyEngine">
+            <Accessors>
+             <Accessor Name="#get_UglifyEngine()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2011-03-20 16:07:37Z">
+                <Issue>
+                 <Item>'Chirp.UglifyEngine.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#ViewEngine">
+            <Accessors>
+             <Accessor Name="#get_ViewEngine()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2011-03-20 16:07:37Z">
+                <Issue>
+                 <Item>'Chirp.ViewEngine.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#YuiCssEngine">
+            <Accessors>
+             <Accessor Name="#get_YuiCssEngine()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2011-03-20 16:07:37Z">
+                <Issue>
+                 <Item>'Chirp.YuiCssEngine.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#YuiJsEngine">
+            <Accessors>
+             <Accessor Name="#get_YuiJsEngine()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2011-03-20 16:07:37Z">
+                <Issue>
+                 <Item>'Chirp.YuiJsEngine.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ClosureCompilerCompressMode">
+          <Members>
+           <Member Name="#ADVANCED_OPTIMIZATIONS">
+            <Messages>
+             <Message Id="ADVANCED" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>ADVANCED</Item>
+               <Item>'ClosureCompilerCompressMode.ADVANCED_OPTIMIZATIONS'</Item>
+               <Item>Advanced</Item>
+              </Issue>
+             </Message>
+             <Message Id="OPTIMIZATIONS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>OPTIMIZATIONS</Item>
+               <Item>'ClosureCompilerCompressMode.ADVANCED_OPTIMIZATIONS'</Item>
+               <Item>Optimizations</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>'ClosureCompilerCompressMode.ADVANCED_OPTIMIZATIONS'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SIMPLE_OPTIMIZATIONS">
+            <Messages>
+             <Message Id="OPTIMIZATIONS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>OPTIMIZATIONS</Item>
+               <Item>'ClosureCompilerCompressMode.SIMPLE_OPTIMIZATIONS'</Item>
+               <Item>Optimizations</Item>
+              </Issue>
+             </Message>
+             <Message Id="SIMPLE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>SIMPLE</Item>
+               <Item>'ClosureCompilerCompressMode.SIMPLE_OPTIMIZATIONS'</Item>
+               <Item>Simple</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>'ClosureCompilerCompressMode.SIMPLE_OPTIMIZATIONS'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#WHITESPACE_ONLY">
+            <Messages>
+             <Message Id="WHITESPACE" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Created="2011-03-20 16:07:37Z">
+              <Issue Name="MemberShouldBeCompoundWord">
+               <Item>WHITESPACE</Item>
+               <Item>'ClosureCompilerCompressMode.WHITESPACE_ONLY'</Item>
+               <Item>WhiteSpace</Item>
+              </Issue>
+             </Message>
+             <Message Id="ONLY" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>ONLY</Item>
+               <Item>'ClosureCompilerCompressMode.WHITESPACE_ONLY'</Item>
+               <Item>Only</Item>
+              </Issue>
+             </Message>
+             <Message Id="WHITESPACE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>WHITESPACE</Item>
+               <Item>'ClosureCompilerCompressMode.WHITESPACE_ONLY'</Item>
+               <Item>Whitespace</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>'ClosureCompilerCompressMode.WHITESPACE_ONLY'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="EcmaScriptErrorReporter">
+          <Messages>
+           <Message Id="Ecma" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+            <Issue Name="Type">
+             <Item>Ecma</Item>
+             <Item>'EcmaScriptErrorReporter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#Error(System.String,System.String,System.Int32,System.String,System.Int32)">
+            <Messages>
+             <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'int.ToString()'</Item>
+               <Item>'EcmaScriptErrorReporter.Error(string, string, int, string, int)'</Item>
+               <Item>'int.ToString(IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'int.ToString()'</Item>
+               <Item>'EcmaScriptErrorReporter.Error(string, string, int, string, int)'</Item>
+               <Item>'int.ToString(IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.String.Format(System.String,System.Object[])" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'string.Format(string, params object[])'</Item>
+               <Item>'EcmaScriptErrorReporter.Error(string, string, int, string, int)'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="GoogleClosureCompiler">
+          <Messages>
+           <Message TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053" Created="2011-03-20 16:07:37Z">
+            <Issue>
+             <Item>'GoogleClosureCompiler'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#CallApi(System.String,System.String)">
+            <Messages>
+             <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'string.Format(string, object, object)'</Item>
+               <Item>'GoogleClosureCompiler.CallApi(string, string)'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Compress(System.String,System.String,Zippy.Chirp.ClosureCompilerCompressMode,System.Action`4&lt;Microsoft.VisualStudio.Shell.TaskErrorCategory,System.String,System.Int32,System.Int32&gt;)">
+            <Messages>
+             <Message Id="System.Int64.ToString(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'long.ToString(string)'</Item>
+               <Item>'GoogleClosureCompiler.Compress(string, string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;)'</Item>
+               <Item>'long.ToString(string, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'string.Format(string, object, object)'</Item>
+               <Item>'GoogleClosureCompiler.Compress(string, string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;)'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.String.Format(System.String,System.Object[])" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'string.Format(string, params object[])'</Item>
+               <Item>'GoogleClosureCompiler.Compress(string, string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;)'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="GoogleClosureCompilerErrorException">
+          <Messages>
+           <Message TypeName="ImplementStandardExceptionConstructors" Category="Microsoft.Design" CheckId="CA1032" Created="2011-03-20 16:07:37Z">
+            <Issue Name="MissingConstructor">
+             <Item>'GoogleClosureCompilerErrorException'</Item>
+             <Item>protected GoogleClosureCompilerErrorException(SerializationInfo, StreamingContext)</Item>
+            </Issue>
+            <Issue Name="MissingConstructor">
+             <Item>'GoogleClosureCompilerErrorException'</Item>
+             <Item>public GoogleClosureCompilerErrorException(String, Exception)</Item>
+            </Issue>
+           </Message>
+           <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Created="2011-03-20 16:07:37Z">
+            <Issue Certainty="95" Level="Error">
+             <Item>'GoogleClosureCompilerErrorException'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="GoogleClosureOfflineCompiler">
+          <Members>
+           <Member Name="#Compress(System.String,Zippy.Chirp.ClosureCompilerCompressMode,System.Action`4&lt;Microsoft.VisualStudio.Shell.TaskErrorCategory,System.String,System.Int32,System.Int32&gt;,System.Collections.Generic.IList`1&lt;System.String&gt;)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'</Item>
+               <Item>'Process.HasExited.get()'</Item>
+               <Item>&#xD;&#xA;   -&gt;'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'&#xD;&#xA;   -&gt;'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'</Item>
+               <Item>'Process.Kill()'</Item>
+               <Item>&#xD;&#xA;   -&gt;'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'&#xD;&#xA;   -&gt;'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'</Item>
+               <Item>'Process.StandardError.get()'</Item>
+               <Item>&#xD;&#xA;   -&gt;'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'&#xD;&#xA;   -&gt;'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'</Item>
+               <Item>'Process.StandardOutput.get()'</Item>
+               <Item>&#xD;&#xA;   -&gt;'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'&#xD;&#xA;   -&gt;'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'</Item>
+               <Item>'Process.Start()'</Item>
+               <Item>&#xD;&#xA;   -&gt;'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'&#xD;&#xA;   -&gt;'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'</Item>
+               <Item>'Process.Start(string, string)'</Item>
+               <Item>&#xD;&#xA;   -&gt;'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'&#xD;&#xA;   -&gt;'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'</Item>
+               <Item>'Process.StartInfo.get()'</Item>
+               <Item>&#xD;&#xA;   -&gt;'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'&#xD;&#xA;   -&gt;'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'</Item>
+               <Item>'ProcessStartInfo.CreateNoWindow.set(bool)'</Item>
+               <Item>&#xD;&#xA;   -&gt;'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'&#xD;&#xA;   -&gt;'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'</Item>
+               <Item>'ProcessStartInfo.RedirectStandardError.set(bool)'</Item>
+               <Item>&#xD;&#xA;   -&gt;'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'&#xD;&#xA;   -&gt;'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'</Item>
+               <Item>'ProcessStartInfo.RedirectStandardOutput.set(bool)'</Item>
+               <Item>&#xD;&#xA;   -&gt;'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'&#xD;&#xA;   -&gt;'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'</Item>
+               <Item>'ProcessStartInfo.UseShellExecute.set(bool)'</Item>
+               <Item>&#xD;&#xA;   -&gt;'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'&#xD;&#xA;   -&gt;'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'</Item>
+               <Item>'ProcessStartInfo.WindowStyle.set(ProcessWindowStyle)'</Item>
+               <Item>&#xD;&#xA;   -&gt;'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'&#xD;&#xA;   -&gt;'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'string.Format(string, object, object)'</Item>
+               <Item>'GoogleClosureOfflineCompiler.Compress(string, ClosureCompilerCompressMode, Action&lt;TaskErrorCategory, string, int, int&gt;, IList&lt;string&gt;)'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetArguments(System.String,Zippy.Chirp.ClosureCompilerCompressMode,System.Collections.Generic.IList`1&lt;System.String&gt;)">
+            <Messages>
+             <Message Id="referencePathsOrUrls" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2011-03-20 16:07:37Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'referencePathsOrUrls'</Item>
+               <Item>'GoogleClosureOfflineCompiler.GetArguments(string, ClosureCompilerCompressMode, IList&lt;string&gt;)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'string.Format(string, object, object)'</Item>
+               <Item>'GoogleClosureOfflineCompiler.GetArguments(string, ClosureCompilerCompressMode, IList&lt;string&gt;)'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Settings">
+          <Messages>
+           <Message TypeName="StaticHolderTypesShouldBeSealed" Category="Microsoft.Design" CheckId="CA1052" Created="2011-03-20 16:07:37Z">
+            <Issue>
+             <Item>'Settings'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#.cctor()">
+            <Messages>
+             <Message TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Settings.Settings()'</Item>
+               <Item>'Settings.googleClosureOffline'</Item>
+               <Item>'bool'</Item>
+               <Item>false</Item>
+              </Issue>
+              <Issue>
+               <Item>'Settings.Settings()'</Item>
+               <Item>'Settings.smartRunT4MVC'</Item>
+               <Item>'bool'</Item>
+               <Item>false</Item>
+              </Issue>
+              <Issue>
+               <Item>'Settings.Settings()'</Item>
+               <Item>'Settings.t4RunAsBuild'</Item>
+               <Item>'bool'</Item>
+               <Item>false</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="InitializeReferenceTypeStaticFieldsInline" Category="Microsoft.Performance" CheckId="CA1810" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Settings'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#AllExtensions">
+            <Messages>
+             <Message TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Settings.AllExtensions'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ChirpGctCoffeeScriptFile">
+            <Messages>
+             <Message Id="Gct" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>Gct</Item>
+               <Item>'Settings.ChirpGctCoffeeScriptFile'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ChirpGctJsFile">
+            <Messages>
+             <Message Id="Js" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>Js</Item>
+               <Item>'Settings.ChirpGctJsFile'</Item>
+               <Item>JS</Item>
+              </Issue>
+             </Message>
+             <Message Id="Gct" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>Gct</Item>
+               <Item>'Settings.ChirpGctJsFile'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ChirpJsFile">
+            <Messages>
+             <Message Id="Js" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>Js</Item>
+               <Item>'Settings.ChirpJsFile'</Item>
+               <Item>JS</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ChirpMSAjaxJsFile">
+            <Messages>
+             <Message Id="Js" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>Js</Item>
+               <Item>'Settings.ChirpMSAjaxJsFile'</Item>
+               <Item>JS</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ChirpSimpleJsFile">
+            <Messages>
+             <Message Id="Js" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>Js</Item>
+               <Item>'Settings.ChirpSimpleJsFile'</Item>
+               <Item>JS</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ChirpUglifyCoffeeScriptFile">
+            <Messages>
+             <Message Id="Uglify" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>Uglify</Item>
+               <Item>'Settings.ChirpUglifyCoffeeScriptFile'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ChirpUglifyJsFile">
+            <Messages>
+             <Message Id="Js" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>Js</Item>
+               <Item>'Settings.ChirpUglifyJsFile'</Item>
+               <Item>JS</Item>
+              </Issue>
+             </Message>
+             <Message Id="Uglify" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>Uglify</Item>
+               <Item>'Settings.ChirpUglifyJsFile'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ChirpWhiteSpaceJsFile">
+            <Messages>
+             <Message Id="Js" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>Js</Item>
+               <Item>'Settings.ChirpWhiteSpaceJsFile'</Item>
+               <Item>JS</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ChirpYUICoffeeScriptFile">
+            <Messages>
+             <Message Id="YUI" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>YUI</Item>
+               <Item>'Settings.ChirpYUICoffeeScriptFile'</Item>
+               <Item>Yui</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ChirpYUIJsFile">
+            <Messages>
+             <Message Id="YUIJs" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>YUIJs</Item>
+               <Item>'Settings.ChirpYUIJsFile'</Item>
+               <Item>Yuijs</Item>
+              </Issue>
+             </Message>
+             <Message Id="YUIJs" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>YUIJs</Item>
+               <Item>'Settings.ChirpYUIJsFile'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#DefaultCssMinifier">
+            <Messages>
+             <Message Id="Minifier" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>Minifier</Item>
+               <Item>'Settings.DefaultCssMinifier'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#DefaultJavaScriptMinifier">
+            <Messages>
+             <Message Id="Minifier" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>Minifier</Item>
+               <Item>'Settings.DefaultJavaScriptMinifier'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Load()">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Convert.ToBoolean(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Convert.ToBoolean(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToBoolean(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToBoolean(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToBoolean(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToBoolean(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToBoolean(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToBoolean(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToBoolean(object, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Convert.ToString(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'Settings.Load()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Settings.Load()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SmartRunT4MVC">
+            <Messages>
+             <Message Id="MVC" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>MVC</Item>
+               <Item>'Settings.SmartRunT4MVC'</Item>
+               <Item>Mvc</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Saved" Kind="Event">
+            <Messages>
+             <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Created="2011-03-20 16:07:37Z">
+              <Issue Name="First">
+               <Item>'Action'</Item>
+              </Issue>
+              <Issue Name="Second">
+               <Item>'Action'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Action'</Item>
+               <Item>EventHandler</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="StringExtensions">
+          <Members>
+           <Member Name="#F(System.String,System.IFormatProvider,System.Object)">
+            <Messages>
+             <Message Id="F" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="MemberMoreMeaningfulName">
+               <Item>'StringExtensions.F(this string, IFormatProvider, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#F(System.String,System.Object)">
+            <Messages>
+             <Message Id="F" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="MemberMoreMeaningfulName">
+               <Item>'StringExtensions.F(this string, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Is(System.String,System.String)">
+            <Messages>
+             <Message Id="a" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'StringExtensions.Is(this string, string)'</Item>
+               <Item>'a'</Item>
+              </Issue>
+             </Message>
+             <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'StringExtensions.Is(this string, string)'</Item>
+               <Item>'b'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.String.Equals(System.String,System.String,System.StringComparison)" TypeName="UseOrdinalStringComparison" Category="Microsoft.Globalization" CheckId="CA1309" Created="2011-03-20 16:07:37Z">
+              <Issue Name="StringComparison">
+               <Item>'StringExtensions.Is(this string, string)'</Item>
+               <Item>StringComparison.InvariantCultureIgnoreCase</Item>
+               <Item>'string.Equals(string, string, StringComparison)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#IsNullOrEmpty(System.String)">
+            <Messages>
+             <Message Id="s" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'StringExtensions.IsNullOrEmpty(this string)'</Item>
+               <Item>'s'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ToBool(System.String,System.Boolean)">
+            <Messages>
+             <Message Id="bool" TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720" Created="2011-03-20 16:07:37Z">
+              <Issue Name="LanguageSpecificMember">
+               <Item>Bool</Item>
+               <Item>'StringExtensions.ToBool(this string, bool)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ToEnum`1(System.String,!!0)">
+            <Messages>
+             <Message Id="System.Convert.ToString(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'StringExtensions.ToEnum&lt;T&gt;(this string, T)'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ToInt(System.String,System.Int32)">
+            <Messages>
+             <Message Id="int" TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720" Created="2011-03-20 16:07:37Z">
+              <Issue Name="LanguageSpecificMember">
+               <Item>Int</Item>
+               <Item>'StringExtensions.ToInt(this string, int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="TaskList">
+          <Messages>
+           <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Created="2011-03-20 16:07:37Z">
+            <Issue Name="ProvideDisposeBool">
+             <Item>'TaskList'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#Add(EnvDTE.Project,Microsoft.VisualStudio.Shell.ErrorTask)">
+            <Messages>
+             <Message Id="Microsoft.VisualStudio.Shell.Interop.IVsSolution.GetProjectOfUniqueName(System.String,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy@)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Created="2011-03-20 16:07:37Z">
+              <Issue Name="HResultOrErrorCode">
+               <Item>'TaskList.Add(Project, ErrorTask)'</Item>
+               <Item>'IVsSolution.GetProjectOfUniqueName(string, out IVsHierarchy)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Add(EnvDTE.Project,Microsoft.VisualStudio.Shell.TaskErrorCategory,System.String,System.Int32,System.Int32,System.String)">
+            <Messages>
+             <Message Id="column-1" TypeName="OperationsShouldNotOverflow" Category="Microsoft.Usage" CheckId="CA2233" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>column-1</Item>
+               <Item>'TaskList.Add(Project, TaskErrorCategory, string, int, int, string)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="line-1" TypeName="OperationsShouldNotOverflow" Category="Microsoft.Usage" CheckId="CA2233" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>line-1</Item>
+               <Item>'TaskList.Add(Project, TaskErrorCategory, string, int, int, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Add(EnvDTE.Project,System.Exception,System.String)">
+            <Messages>
+             <Message Id="filename" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Created="2011-03-20 16:07:37Z">
+              <Issue Name="MemberParameterShouldBeCompoundWord">
+               <Item>'TaskList.Add(Project, Exception, string)'</Item>
+               <Item>filename</Item>
+               <Item>'filename'</Item>
+               <Item>fileName</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Dispose()">
+            <Messages>
+             <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Created="2011-03-20 16:07:37Z">
+              <Issue Name="NotCalled">
+               <Item>'TaskList.Dispose()'</Item>
+               <Item>'GC.SuppressFinalize(object)'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Created="2011-03-20 16:07:37Z">
+              <Issue Name="DisposeImplementation">
+               <Item>'TaskList.Dispose()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#HasErrors(System.String)">
+            <Messages>
+             <Message Id="Filename" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Created="2011-03-20 16:07:37Z">
+              <Issue Name="MemberParameterShouldBeCompoundWord">
+               <Item>'TaskList.HasErrors(string)'</Item>
+               <Item>Filename</Item>
+               <Item>'fullFilename'</Item>
+               <Item>FileName</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Task_Navigate(System.Object,System.EventArgs)">
+            <Messages>
+             <Message Id="result" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'TaskList.Task_Navigate(object, EventArgs)'</Item>
+               <Item>'result'</Item>
+               <Item>'bool'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Utilities">
+          <Members>
+           <Member Name="#Description(System.Enum)">
+            <Messages>
+             <Message Id="e" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="MemberParameterMoreMeaningfulName">
+               <Item>'Utilities.Description(this Enum)'</Item>
+               <Item>'e'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Dispose`1(!!0&amp;)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Utilities.Dispose&lt;T&gt;(ref T)'</Item>
+               <Item>'object'</Item>
+              </Issue>
+             </Message>
+             <Message Id="0#" TypeName="DoNotPassTypesByReference" Category="Microsoft.Design" CheckId="CA1045" Created="2011-03-20 16:07:37Z">
+              <Issue Level="CriticalWarning">
+               <Item>'obj'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetBaseFileName(System.String,System.String[])">
+            <Messages>
+             <Message Id="System.String.EndsWith(System.String,System.StringComparison)" TypeName="UseOrdinalStringComparison" Category="Microsoft.Globalization" CheckId="CA1309" Created="2011-03-20 16:07:37Z">
+              <Issue Name="StringComparison">
+               <Item>'Utilities.GetBaseFileName(string, params string[])'</Item>
+               <Item>StringComparison.InvariantCultureIgnoreCase</Item>
+               <Item>'string.EndsWith(string, StringComparison)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Zippy.Chirp.ConfigurationScreen">
+        <Types>
+         <Type Name="CoffeeScript">
+          <Members>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.GetProperties(System.Object&amp;)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'CoffeeScript'</Item>
+               <Item>'IDTToolsOptionsPage.GetProperties(ref object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnAfterCreated(EnvDTE.DTE)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'CoffeeScript'</Item>
+               <Item>'IDTToolsOptionsPage.OnAfterCreated(DTE)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnCancel()">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'CoffeeScript'</Item>
+               <Item>'IDTToolsOptionsPage.OnCancel()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnHelp()">
+            <Messages>
+             <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'CoffeeScript.IDTToolsOptionsPage.OnHelp()'</Item>
+               <Item>'Process.Start(string)'</Item>
+               <Item>&#xD;&#xA;   -&gt;'CoffeeScript.IDTToolsOptionsPage.OnHelp()'&#xD;&#xA;   -&gt;'CoffeeScript.IDTToolsOptionsPage.OnHelp()'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'CoffeeScript'</Item>
+               <Item>'IDTToolsOptionsPage.OnHelp()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnOK()">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'CoffeeScript'</Item>
+               <Item>'IDTToolsOptionsPage.OnOK()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Config">
+          <Members>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.GetProperties(System.Object&amp;)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Config'</Item>
+               <Item>'IDTToolsOptionsPage.GetProperties(ref object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnAfterCreated(EnvDTE.DTE)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Config'</Item>
+               <Item>'IDTToolsOptionsPage.OnAfterCreated(DTE)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnCancel()">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Config'</Item>
+               <Item>'IDTToolsOptionsPage.OnCancel()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnHelp()">
+            <Messages>
+             <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Config.IDTToolsOptionsPage.OnHelp()'</Item>
+               <Item>'Process.Start(string)'</Item>
+               <Item>&#xD;&#xA;   -&gt;'Config.IDTToolsOptionsPage.OnHelp()'&#xD;&#xA;   -&gt;'Config.IDTToolsOptionsPage.OnHelp()'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Config'</Item>
+               <Item>'IDTToolsOptionsPage.OnHelp()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnOK()">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Config'</Item>
+               <Item>'IDTToolsOptionsPage.OnOK()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Css">
+          <Members>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.GetProperties(System.Object&amp;)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Css'</Item>
+               <Item>'IDTToolsOptionsPage.GetProperties(ref object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnAfterCreated(EnvDTE.DTE)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Css'</Item>
+               <Item>'IDTToolsOptionsPage.OnAfterCreated(DTE)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnCancel()">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Css'</Item>
+               <Item>'IDTToolsOptionsPage.OnCancel()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnHelp()">
+            <Messages>
+             <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Css.IDTToolsOptionsPage.OnHelp()'</Item>
+               <Item>'Process.Start(string)'</Item>
+               <Item>&#xD;&#xA;   -&gt;'Css.IDTToolsOptionsPage.OnHelp()'&#xD;&#xA;   -&gt;'Css.IDTToolsOptionsPage.OnHelp()'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Css'</Item>
+               <Item>'IDTToolsOptionsPage.OnHelp()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnOK()">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Css'</Item>
+               <Item>'IDTToolsOptionsPage.OnOK()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="GoogleClosure">
+          <Members>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.GetProperties(System.Object&amp;)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'GoogleClosure'</Item>
+               <Item>'IDTToolsOptionsPage.GetProperties(ref object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnAfterCreated(EnvDTE.DTE)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'GoogleClosure'</Item>
+               <Item>'IDTToolsOptionsPage.OnAfterCreated(DTE)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnCancel()">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'GoogleClosure'</Item>
+               <Item>'IDTToolsOptionsPage.OnCancel()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnHelp()">
+            <Messages>
+             <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'GoogleClosure.IDTToolsOptionsPage.OnHelp()'</Item>
+               <Item>'Process.Start(string)'</Item>
+               <Item>&#xD;&#xA;   -&gt;'GoogleClosure.IDTToolsOptionsPage.OnHelp()'&#xD;&#xA;   -&gt;'GoogleClosure.IDTToolsOptionsPage.OnHelp()'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'GoogleClosure'</Item>
+               <Item>'IDTToolsOptionsPage.OnHelp()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnOK()">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'GoogleClosure'</Item>
+               <Item>'IDTToolsOptionsPage.OnOK()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#FindJava_Click(System.Object,System.EventArgs)">
+            <Messages>
+             <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'string.Format(string, object)'</Item>
+               <Item>'GoogleClosure.FindJava_Click(object, EventArgs)'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'GoogleClosure.FindJava_Click(object, EventArgs)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#FindJavaPath()">
+            <Messages>
+             <Message Id="System.Convert.ToString(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'GoogleClosure.FindJavaPath()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'GoogleClosure.FindJavaPath()'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Javascript">
+          <Messages>
+           <Message Id="Javascript" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Created="2011-03-20 16:07:37Z">
+            <Issue Name="TypeShouldBeCompoundWord">
+             <Item>Javascript</Item>
+             <Item>'Javascript'</Item>
+             <Item>JavaScript</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.GetProperties(System.Object&amp;)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Javascript'</Item>
+               <Item>'IDTToolsOptionsPage.GetProperties(ref object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnAfterCreated(EnvDTE.DTE)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Javascript'</Item>
+               <Item>'IDTToolsOptionsPage.OnAfterCreated(DTE)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnCancel()">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Javascript'</Item>
+               <Item>'IDTToolsOptionsPage.OnCancel()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnHelp()">
+            <Messages>
+             <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Javascript.IDTToolsOptionsPage.OnHelp()'</Item>
+               <Item>'Process.Start(string)'</Item>
+               <Item>&#xD;&#xA;   -&gt;'Javascript.IDTToolsOptionsPage.OnHelp()'&#xD;&#xA;   -&gt;'Javascript.IDTToolsOptionsPage.OnHelp()'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Javascript'</Item>
+               <Item>'IDTToolsOptionsPage.OnHelp()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnOK()">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Javascript'</Item>
+               <Item>'IDTToolsOptionsPage.OnOK()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Less">
+          <Members>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.GetProperties(System.Object&amp;)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Less'</Item>
+               <Item>'IDTToolsOptionsPage.GetProperties(ref object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnAfterCreated(EnvDTE.DTE)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Less'</Item>
+               <Item>'IDTToolsOptionsPage.OnAfterCreated(DTE)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnCancel()">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Less'</Item>
+               <Item>'IDTToolsOptionsPage.OnCancel()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnHelp()">
+            <Messages>
+             <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Less.IDTToolsOptionsPage.OnHelp()'</Item>
+               <Item>'Process.Start(string)'</Item>
+               <Item>&#xD;&#xA;   -&gt;'Less.IDTToolsOptionsPage.OnHelp()'&#xD;&#xA;   -&gt;'Less.IDTToolsOptionsPage.OnHelp()'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Less'</Item>
+               <Item>'IDTToolsOptionsPage.OnHelp()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnOK()">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'Less'</Item>
+               <Item>'IDTToolsOptionsPage.OnOK()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="T4Template">
+          <Members>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.GetProperties(System.Object&amp;)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'T4Template'</Item>
+               <Item>'IDTToolsOptionsPage.GetProperties(ref object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnAfterCreated(EnvDTE.DTE)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'T4Template'</Item>
+               <Item>'IDTToolsOptionsPage.OnAfterCreated(DTE)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnCancel()">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'T4Template'</Item>
+               <Item>'IDTToolsOptionsPage.OnCancel()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnHelp()">
+            <Messages>
+             <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'T4Template.IDTToolsOptionsPage.OnHelp()'</Item>
+               <Item>'Process.Start(string)'</Item>
+               <Item>&#xD;&#xA;   -&gt;'T4Template.IDTToolsOptionsPage.OnHelp()'&#xD;&#xA;   -&gt;'T4Template.IDTToolsOptionsPage.OnHelp()'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'T4Template'</Item>
+               <Item>'IDTToolsOptionsPage.OnHelp()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnvDTE.IDTToolsOptionsPage.OnOK()">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'T4Template'</Item>
+               <Item>'IDTToolsOptionsPage.OnOK()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#T4RunOnBuild_CheckedChanged(System.Object,System.EventArgs)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'T4Template.T4RunOnBuild_CheckedChanged(object, EventArgs)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Zippy.Chirp.Engines">
+        <Types>
+         <Type Name="ActionEngine">
+          <Members>
+           <Member Name="#Dispose()">
+            <Messages>
+             <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Created="2011-03-20 16:07:37Z">
+              <Issue Name="NotCalled">
+               <Item>'ActionEngine.Dispose()'</Item>
+               <Item>'GC.SuppressFinalize(object)'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Created="2011-03-20 16:07:37Z">
+              <Issue Name="DisposeImplementation">
+               <Item>'ActionEngine.Dispose()'</Item>
+              </Issue>
+              <Issue Name="DisposeSignature">
+               <Item>'ActionEngine.Dispose()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Handles(System.String)">
+            <Messages>
+             <Message Id="Handles" TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>'ActionEngine.Handles(string)'</Item>
+               <Item>Handles</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ClosureCompilerEngine">
+          <Members>
+           <Member Name="#Minify(System.String,System.String,EnvDTE.ProjectItem,Zippy.Chirp.ClosureCompilerCompressMode)">
+            <Messages>
+             <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'int.ToString()'</Item>
+               <Item>'ClosureCompilerEngine.Minify(string, string, ProjectItem, ClosureCompilerCompressMode)'</Item>
+               <Item>'int.ToString(IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'int.ToString()'</Item>
+               <Item>'ClosureCompilerEngine.Minify(string, string, ProjectItem, ClosureCompilerCompressMode)'</Item>
+               <Item>'int.ToString(IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.String.Format(System.String,System.Object[])" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'string.Format(string, params object[])'</Item>
+               <Item>'ClosureCompilerEngine.Minify(string, string, ProjectItem, ClosureCompilerCompressMode)'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="CoffeeScriptEngine">
+          <Members>
+           <Member Name="#Dispose()">
+            <Messages>
+             <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Created="2011-03-20 16:07:37Z">
+              <Issue Name="NotCalled">
+               <Item>'CoffeeScriptEngine.Dispose()'</Item>
+               <Item>'GC.SuppressFinalize(object)'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Created="2011-03-20 16:07:37Z">
+              <Issue Name="DisposeImplementation">
+               <Item>'CoffeeScriptEngine.Dispose()'</Item>
+              </Issue>
+              <Issue Name="DisposeSignature">
+               <Item>'CoffeeScriptEngine.Dispose()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#IsChirpCoffeeScriptFile(System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'CoffeeScriptEngine.IsChirpCoffeeScriptFile(string)'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-03-20 16:07:37Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'CoffeeScriptEngine.IsChirpCoffeeScriptFile(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#IsChirpGctCoffeeScriptFile(System.String)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-03-20 16:07:37Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'CoffeeScriptEngine.IsChirpGctCoffeeScriptFile(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#IsChirpMSAjaxCoffeeScriptFile(System.String)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-03-20 16:07:37Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'CoffeeScriptEngine.IsChirpMSAjaxCoffeeScriptFile(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#IsChirpSimpleCoffeeScriptFile(System.String)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-03-20 16:07:37Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'CoffeeScriptEngine.IsChirpSimpleCoffeeScriptFile(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#IsChirpUglifyCoffeeScriptFile(System.String)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-03-20 16:07:37Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'CoffeeScriptEngine.IsChirpUglifyCoffeeScriptFile(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#IsChirpWhiteSpaceCoffeeScriptFile(System.String)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-03-20 16:07:37Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'CoffeeScriptEngine.IsChirpWhiteSpaceCoffeeScriptFile(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#IsChirpYUICoffeeScriptFile(System.String)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-03-20 16:07:37Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'CoffeeScriptEngine.IsChirpYUICoffeeScriptFile(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#TransformToJs(System.String,System.String,EnvDTE.ProjectItem)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'CoffeeScriptEngine.TransformToJs(string, string, ProjectItem)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+             <Message Id="Js" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>Js</Item>
+               <Item>'CoffeeScriptEngine.TransformToJs(string, string, ProjectItem)'</Item>
+               <Item>JS</Item>
+              </Issue>
+             </Message>
+             <Message Id="error" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'CoffeeScriptEngine.TransformToJs(string, string, ProjectItem)'</Item>
+               <Item>'error'</Item>
+               <Item>'string'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ConfigEngine">
+          <Members>
+           <Member Name="#.ctor()">
+            <Messages>
+             <Message Id="System.Collections.Generic.Dictionary`2&lt;System.String,System.Collections.Generic.List`1&lt;System.String&gt;&gt;.#ctor(System.Collections.Generic.IEqualityComparer`1&lt;System.String&gt;)" TypeName="UseOrdinalStringComparison" Category="Microsoft.Globalization" CheckId="CA1309" Created="2011-03-20 16:07:37Z">
+              <Issue Name="StringComparer">
+               <Item>'ConfigEngine.ConfigEngine()'</Item>
+               <Item>StringComparer.InvariantCultureIgnoreCase</Item>
+               <Item>'Dictionary&lt;string, List&lt;string&gt;&gt;.Dictionary(IEqualityComparer&lt;string&gt;)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#CheckForConfigRefresh(EnvDTE.ProjectItem)">
+            <Messages>
+             <Message Id="System.Linq.Enumerable.Distinct&lt;System.String&gt;(System.Collections.Generic.IEnumerable`1&lt;System.String&gt;,System.Collections.Generic.IEqualityComparer`1&lt;System.String&gt;)" TypeName="UseOrdinalStringComparison" Category="Microsoft.Globalization" CheckId="CA1309" Created="2011-03-20 16:07:37Z">
+              <Issue Name="StringComparer">
+               <Item>'ConfigEngine.CheckForConfigRefresh(ProjectItem)'</Item>
+               <Item>StringComparer.InvariantCultureIgnoreCase</Item>
+               <Item>'Enumerable.Distinct&lt;string&gt;(this IEnumerable&lt;string&gt;, IEqualityComparer&lt;string&gt;)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Handles(System.String)">
+            <Messages>
+             <Message Id="System.String.EndsWith(System.String,System.StringComparison)" TypeName="UseOrdinalStringComparison" Category="Microsoft.Globalization" CheckId="CA1309" Created="2011-03-20 16:07:37Z">
+              <Issue Name="StringComparison">
+               <Item>'ConfigEngine.Handles(string)'</Item>
+               <Item>StringComparison.InvariantCultureIgnoreCase</Item>
+               <Item>'string.EndsWith(string, StringComparison)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#IsCoffeeScriptFile(System.String)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-03-20 16:07:37Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'ConfigEngine.IsCoffeeScriptFile(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#IsCssFile(System.String)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-03-20 16:07:37Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'ConfigEngine.IsCssFile(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#IsJsFile(System.String)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-03-20 16:07:37Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'ConfigEngine.IsJsFile(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#IsLessFile(System.String)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-03-20 16:07:37Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'ConfigEngine.IsLessFile(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#LoadConfigFileGroups(System.String)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-03-20 16:07:37Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'ConfigEngine.LoadConfigFileGroups(string)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'string.Format(string, object)'</Item>
+               <Item>'ConfigEngine.LoadConfigFileGroups(string)'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#RefreshAll()">
+            <Messages>
+             <Message Id="System.Linq.Enumerable.Distinct&lt;System.String&gt;(System.Collections.Generic.IEnumerable`1&lt;System.String&gt;,System.Collections.Generic.IEqualityComparer`1&lt;System.String&gt;)" TypeName="UseOrdinalStringComparison" Category="Microsoft.Globalization" CheckId="CA1309" Created="2011-03-20 16:07:37Z">
+              <Issue Name="StringComparer">
+               <Item>'ConfigEngine.RefreshAll()'</Item>
+               <Item>StringComparer.InvariantCultureIgnoreCase</Item>
+               <Item>'Enumerable.Distinct&lt;string&gt;(this IEnumerable&lt;string&gt;, IEqualityComparer&lt;string&gt;)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="EngineManager">
+          <Messages>
+           <Message TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405" Created="2011-03-20 16:07:37Z">
+            <Issue>
+             <Item>'EngineManager'</Item>
+             <Item> Zippy.Chirp.Threading.ServiceQueue`1&lt;EnvDTE.ProjectItem&gt;</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#Clear()">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'EngineManager.Clear()'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Enqueue(EnvDTE.ProjectItem)">
+            <Messages>
+             <Message Id="0#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'EngineManager.Enqueue(ProjectItem)'</Item>
+               <Item>'projectItem'</Item>
+               <Item>'obj'</Item>
+               <Item>'ServiceQueue&lt;ProjectItem&gt;.Enqueue(ProjectItem)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Error(EnvDTE.ProjectItem,System.Exception)">
+            <Messages>
+             <Message Id="0#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'EngineManager.Error(ProjectItem, Exception)'</Item>
+               <Item>'projectItem'</Item>
+               <Item>'item'</Item>
+               <Item>'ServiceQueue&lt;ProjectItem&gt;.Error(ProjectItem, Exception)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Process(EnvDTE.ProjectItem)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'EngineManager.Process(ProjectItem)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+             <Message Id="0#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'EngineManager.Process(ProjectItem)'</Item>
+               <Item>'projectItem'</Item>
+               <Item>'item'</Item>
+               <Item>'ServiceQueue&lt;ProjectItem&gt;.Process(ProjectItem)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'string.Format(string, object)'</Item>
+               <Item>'EngineManager.Process(ProjectItem)'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+              <Issue>
+               <Item>'string.Format(string, object)'</Item>
+               <Item>'EngineManager.Process(ProjectItem)'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'EngineManager.Process(ProjectItem)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="EnvironmentDirectory">
+          <Messages>
+           <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Created="2011-03-20 16:07:37Z">
+            <Issue Name="ProvideDisposeBool">
+             <Item>'EnvironmentDirectory'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#Dispose()">
+            <Messages>
+             <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Created="2011-03-20 16:07:37Z">
+              <Issue Name="NotCalled">
+               <Item>'EnvironmentDirectory.Dispose()'</Item>
+               <Item>'GC.SuppressFinalize(object)'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Created="2011-03-20 16:07:37Z">
+              <Issue Name="DisposeImplementation">
+               <Item>'EnvironmentDirectory.Dispose()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ImageSprite">
+          <Members>
+           <Member Name="#GetFormat(System.String)">
+            <Messages>
+             <Message Id="System.String.ToLower" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'string.ToLower()'</Item>
+               <Item>'ImageSprite.GetFormat(string)'</Item>
+               <Item>'string.ToLower(CultureInfo)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="JsEngine">
+          <Messages>
+           <Message Id="Js" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+            <Issue Name="Type">
+             <Item>Js</Item>
+             <Item>'JsEngine'</Item>
+             <Item>JS</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="JSHintEngine">
+          <Members>
+           <Member Name="#Dispose()">
+            <Messages>
+             <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Created="2011-03-20 16:07:37Z">
+              <Issue Name="NotCalled">
+               <Item>'JSHintEngine.Dispose()'</Item>
+               <Item>'GC.SuppressFinalize(object)'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Created="2011-03-20 16:07:37Z">
+              <Issue Name="DisposeImplementation">
+               <Item>'JSHintEngine.Dispose()'</Item>
+              </Issue>
+              <Issue Name="DisposeSignature">
+               <Item>'JSHintEngine.Dispose()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="LessEngine">
+          <Members>
+           <Member Name="#Handles(System.String)">
+            <Messages>
+             <Message Id="System.String.EndsWith(System.String,System.StringComparison)" TypeName="UseOrdinalStringComparison" Category="Microsoft.Globalization" CheckId="CA1309" Created="2011-03-20 16:07:37Z">
+              <Issue Name="StringComparison">
+               <Item>'LessEngine.Handles(string)'</Item>
+               <Item>StringComparison.InvariantCultureIgnoreCase</Item>
+               <Item>'string.EndsWith(string, StringComparison)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#IsChirpHybridLessFile(System.String)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-03-20 16:07:37Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'LessEngine.IsChirpHybridLessFile(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#IsChirpLessFile(System.String)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-03-20 16:07:37Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'LessEngine.IsChirpLessFile(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#IsChirpMichaelAshLessFile(System.String)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-03-20 16:07:37Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'LessEngine.IsChirpMichaelAshLessFile(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#IsChirpMSAjaxLessFile(System.String)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-03-20 16:07:37Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'LessEngine.IsChirpMSAjaxLessFile(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#TransformToCss(System.String,System.String,EnvDTE.ProjectItem)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'LessEngine.TransformToCss(string, string, ProjectItem)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'int.ToString()'</Item>
+               <Item>'LessEngine.TransformToCss(string, string, ProjectItem)'</Item>
+               <Item>'int.ToString(IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'int.ToString()'</Item>
+               <Item>'LessEngine.TransformToCss(string, string, ProjectItem)'</Item>
+               <Item>'int.ToString(IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.String.Format(System.String,System.Object[])" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'string.Format(string, params object[])'</Item>
+               <Item>'LessEngine.TransformToCss(string, string, ProjectItem)'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="MsCssEngine">
+          <Messages>
+           <Message Id="Ms" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+            <Issue Name="Type">
+             <Item>Ms</Item>
+             <Item>'MsCssEngine'</Item>
+             <Item>MS</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#Minify(System.String,System.String,EnvDTE.ProjectItem)">
+            <Messages>
+             <Message Id="System.Int32.TryParse(System.String,System.Int32@)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Created="2011-03-20 16:07:37Z">
+              <Issue Name="TryParse">
+               <Item>'MsCssEngine.Minify(string, string, ProjectItem)'</Item>
+               <Item>'int.TryParse(string, out int)'</Item>
+              </Issue>
+              <Issue Name="TryParse">
+               <Item>'MsCssEngine.Minify(string, string, ProjectItem)'</Item>
+               <Item>'int.TryParse(string, out int)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'int.ToString()'</Item>
+               <Item>'MsCssEngine.Minify(string, string, ProjectItem)'</Item>
+               <Item>'int.ToString(IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'int.ToString()'</Item>
+               <Item>'MsCssEngine.Minify(string, string, ProjectItem)'</Item>
+               <Item>'int.ToString(IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.String.Format(System.String,System.Object[])" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'string.Format(string, params object[])'</Item>
+               <Item>'MsCssEngine.Minify(string, string, ProjectItem)'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.String.IndexOf(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'MsCssEngine.Minify(string, string, ProjectItem)'</Item>
+               <Item>'string.IndexOf(string)'</Item>
+               <Item>'string.IndexOf(string, StringComparison)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'MsCssEngine.Minify(string, string, ProjectItem)'</Item>
+               <Item>'string.IndexOf(string)'</Item>
+               <Item>'string.IndexOf(string, StringComparison)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'MsCssEngine.Minify(string, string, ProjectItem)'</Item>
+               <Item>'string.IndexOf(string)'</Item>
+               <Item>'string.IndexOf(string, StringComparison)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="MsJsEngine">
+          <Messages>
+           <Message Id="Js" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+            <Issue Name="Type">
+             <Item>Js</Item>
+             <Item>'MsJsEngine'</Item>
+             <Item>JS</Item>
+            </Issue>
+           </Message>
+           <Message Id="Ms" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+            <Issue Name="Type">
+             <Item>Ms</Item>
+             <Item>'MsJsEngine'</Item>
+             <Item>MS</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#Minify(System.String,System.String,EnvDTE.ProjectItem)">
+            <Messages>
+             <Message Id="System.Int32.TryParse(System.String,System.Int32@)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Created="2011-03-20 16:07:37Z">
+              <Issue Name="TryParse">
+               <Item>'MsJsEngine.Minify(string, string, ProjectItem)'</Item>
+               <Item>'int.TryParse(string, out int)'</Item>
+              </Issue>
+              <Issue Name="TryParse">
+               <Item>'MsJsEngine.Minify(string, string, ProjectItem)'</Item>
+               <Item>'int.TryParse(string, out int)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'int.ToString()'</Item>
+               <Item>'MsJsEngine.Minify(string, string, ProjectItem)'</Item>
+               <Item>'int.ToString(IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'int.ToString()'</Item>
+               <Item>'MsJsEngine.Minify(string, string, ProjectItem)'</Item>
+               <Item>'int.ToString(IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.String.Format(System.String,System.Object[])" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'string.Format(string, params object[])'</Item>
+               <Item>'MsJsEngine.Minify(string, string, ProjectItem)'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.String.IndexOf(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'MsJsEngine.Minify(string, string, ProjectItem)'</Item>
+               <Item>'string.IndexOf(string)'</Item>
+               <Item>'string.IndexOf(string, StringComparison)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'MsJsEngine.Minify(string, string, ProjectItem)'</Item>
+               <Item>'string.IndexOf(string)'</Item>
+               <Item>'string.IndexOf(string, StringComparison)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'MsJsEngine.Minify(string, string, ProjectItem)'</Item>
+               <Item>'string.IndexOf(string)'</Item>
+               <Item>'string.IndexOf(string, StringComparison)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="T4Engine">
+          <Members>
+           <Member Name="#Handles(System.String)">
+            <Messages>
+             <Message Id="0#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'T4Engine.Handles(string)'</Item>
+               <Item>'filename'</Item>
+               <Item>'fullFileName'</Item>
+               <Item>'ActionEngine.Handles(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#IsMVCStandardControllerFile(System.String)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-03-20 16:07:37Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'T4Engine.IsMVCStandardControllerFile(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#IsMVCStandardViewScriptOrContentFile(System.String)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-03-20 16:07:37Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'T4Engine.IsMVCStandardViewScriptOrContentFile(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#RunT4Template(EnvDTE80.DTE2,System.String)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'T4Engine.RunT4Template(DTE2, string)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+             <Message Id="t" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="MemberParameter">
+               <Item>'T4Engine.RunT4Template(DTE2, string)'</Item>
+               <Item>t</Item>
+               <Item>'t4TemplateList'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'T4Engine.RunT4Template(DTE2, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="TransformEngine">
+          <Members>
+           <Member Name="#Extensions">
+            <Messages>
+             <Message TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'TransformEngine.Extensions'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Handles(System.String)">
+            <Messages>
+             <Message Id="System.String.EndsWith(System.String,System.StringComparison)" TypeName="UseOrdinalStringComparison" Category="Microsoft.Globalization" CheckId="CA1309" Created="2011-03-20 16:07:37Z">
+              <Issue Name="StringComparison">
+               <Item>'TransformEngine.Handles(string)'</Item>
+               <Item>StringComparison.InvariantCultureIgnoreCase</Item>
+               <Item>'string.EndsWith(string, StringComparison)'</Item>
+              </Issue>
+              <Issue Name="StringComparison">
+               <Item>'TransformEngine.Handles(string)'</Item>
+               <Item>StringComparison.InvariantCultureIgnoreCase</Item>
+               <Item>'string.EndsWith(string, StringComparison)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OutputExtension">
+            <Messages>
+             <Message TypeName="PropertyNamesShouldNotMatchGetMethods" Category="Microsoft.Naming" CheckId="CA1721" Created="2011-03-20 16:07:37Z" FixCategory="NonBreaking">
+              <Issue Name="SameType">
+               <Item>'TransformEngine.OutputExtension'</Item>
+               <Item>'TransformEngine.GetOutputExtension(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="UglifyEngine">
+          <Messages>
+           <Message Id="Uglify" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+            <Issue Name="Type">
+             <Item>Uglify</Item>
+             <Item>'UglifyEngine'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#Dispose()">
+            <Messages>
+             <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Created="2011-03-20 16:07:37Z">
+              <Issue Name="NotCalled">
+               <Item>'UglifyEngine.Dispose()'</Item>
+               <Item>'GC.SuppressFinalize(object)'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Created="2011-03-20 16:07:37Z">
+              <Issue Name="DisposeImplementation">
+               <Item>'UglifyEngine.Dispose()'</Item>
+              </Issue>
+              <Issue Name="DisposeSignature">
+               <Item>'UglifyEngine.Dispose()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Minify(System.String,System.String,EnvDTE.ProjectItem)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'UglifyEngine.Minify(string, string, ProjectItem)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ViewEngine">
+          <Members>
+           <Member Name="#Handles(System.String)">
+            <Messages>
+             <Message Id="System.String.EndsWith(System.String,System.StringComparison)" TypeName="UseOrdinalStringComparison" Category="Microsoft.Globalization" CheckId="CA1309" Created="2011-03-20 16:07:37Z">
+              <Issue Name="StringComparison">
+               <Item>'ViewEngine.Handles(string)'</Item>
+               <Item>StringComparison.InvariantCultureIgnoreCase</Item>
+               <Item>'string.EndsWith(string, StringComparison)'</Item>
+              </Issue>
+              <Issue Name="StringComparison">
+               <Item>'ViewEngine.Handles(string)'</Item>
+               <Item>StringComparison.InvariantCultureIgnoreCase</Item>
+               <Item>'string.EndsWith(string, StringComparison)'</Item>
+              </Issue>
+              <Issue Name="StringComparison">
+               <Item>'ViewEngine.Handles(string)'</Item>
+               <Item>StringComparison.InvariantCultureIgnoreCase</Item>
+               <Item>'string.EndsWith(string, StringComparison)'</Item>
+              </Issue>
+              <Issue Name="StringComparison">
+               <Item>'ViewEngine.Handles(string)'</Item>
+               <Item>StringComparison.InvariantCultureIgnoreCase</Item>
+               <Item>'string.EndsWith(string, StringComparison)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Transform(System.String,System.String,EnvDTE.ProjectItem)">
+            <Messages>
+             <Message Id="System.String.IndexOf(System.String,System.StringComparison)" TypeName="UseOrdinalStringComparison" Category="Microsoft.Globalization" CheckId="CA1309" Created="2011-03-20 16:07:37Z">
+              <Issue Name="StringComparison">
+               <Item>'ViewEngine.Transform(string, string, ProjectItem)'</Item>
+               <Item>StringComparison.InvariantCultureIgnoreCase</Item>
+               <Item>'string.IndexOf(string, StringComparison)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="YuiCssEngine">
+          <Messages>
+           <Message Id="Yui" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+            <Issue Name="Type">
+             <Item>Yui</Item>
+             <Item>'YuiCssEngine'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#Transform(System.String,System.String,EnvDTE.ProjectItem)">
+            <Messages>
+             <Message Id="System.String.EndsWith(System.String,System.StringComparison)" TypeName="UseOrdinalStringComparison" Category="Microsoft.Globalization" CheckId="CA1309" Created="2011-03-20 16:07:37Z">
+              <Issue Name="StringComparison">
+               <Item>'YuiCssEngine.Transform(string, string, ProjectItem)'</Item>
+               <Item>StringComparison.InvariantCultureIgnoreCase</Item>
+               <Item>'string.EndsWith(string, StringComparison)'</Item>
+              </Issue>
+              <Issue Name="StringComparison">
+               <Item>'YuiCssEngine.Transform(string, string, ProjectItem)'</Item>
+               <Item>StringComparison.InvariantCultureIgnoreCase</Item>
+               <Item>'string.EndsWith(string, StringComparison)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="YuiJsEngine">
+          <Messages>
+           <Message Id="Js" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+            <Issue Name="Type">
+             <Item>Js</Item>
+             <Item>'YuiJsEngine'</Item>
+             <Item>JS</Item>
+            </Issue>
+           </Message>
+           <Message Id="Yui" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+            <Issue Name="Type">
+             <Item>Yui</Item>
+             <Item>'YuiJsEngine'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#Minify(System.String,System.String,EnvDTE.ProjectItem)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'YuiJsEngine.Minify(string, string, ProjectItem)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Zippy.Chirp.Manager">
+        <Types>
+         <Type Name="VSProjectItemManager">
+          <Messages>
+           <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Created="2011-03-20 16:07:37Z">
+            <Issue Name="ProvideDisposeBool">
+             <Item>'VSProjectItemManager'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#.ctor(EnvDTE80.DTE2,EnvDTE.ProjectItem,System.String)">
+            <Messages>
+             <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'VSProjectItemManager.VSProjectItemManager(DTE2, ProjectItem, string)'</Item>
+               <Item>&#xD;&#xA;&#xD;&#xA;VSProjectItemManager..ctor(DTE2, ProjectItem, String)&#xD;&#xA;VSProjectItemManager.GetFileNamePrefix(String):String</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#AddItem(EnvDTE.ProjectItem,System.String)">
+            <Messages>
+             <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2011-03-20 16:07:37Z">
+              <Issue Name="TooGeneric">
+               <Item>'VSProjectItemManager.AddItem(ProjectItem, string)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#CompareFile(System.String,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Parameter">
+               <Item>'contents'</Item>
+               <Item>'byte[]'</Item>
+               <Item>'VSProjectItemManager.CompareFile(string, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'contents'</Item>
+               <Item>'string'</Item>
+               <Item>'VSProjectItemManager.CompareFile(string, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ContainsItem(EnvDTE.ProjectItems,System.String)">
+            <Messages>
+             <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2011-03-20 16:07:37Z">
+              <Issue Name="TooGeneric">
+               <Item>'VSProjectItemManager.ContainsItem(ProjectItems, string)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#DeleteItems(EnvDTE.ProjectItems,System.Collections.Generic.IEnumerable`1&lt;System.String&gt;)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'VSProjectItemManager.DeleteItems(ProjectItems, IEnumerable&lt;string&gt;)'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="InstantiateArgumentExceptionsCorrectly" Category="Microsoft.Usage" CheckId="CA2208" Created="2011-03-20 16:07:37Z">
+              <Issue Name="IncorrectParameterName">
+               <Item>'VSProjectItemManager.DeleteItems(ProjectItems, IEnumerable&lt;string&gt;)'</Item>
+               <Item>projectItem</Item>
+               <Item>'paramName'</Item>
+               <Item>'ArgumentNullException'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Dispose()">
+            <Messages>
+             <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Created="2011-03-20 16:07:37Z">
+              <Issue Name="NotCalled">
+               <Item>'VSProjectItemManager.Dispose()'</Item>
+               <Item>'GC.SuppressFinalize(object)'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Created="2011-03-20 16:07:37Z">
+              <Issue Name="DisposeImplementation">
+               <Item>'VSProjectItemManager.Dispose()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Equals(System.Byte[],System.Byte[])">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-03-20 16:07:37Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'VSProjectItemManager.Equals(byte[], byte[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetFileNamePrefix(System.String)">
+            <Messages>
+             <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2011-03-20 16:07:37Z">
+              <Issue Name="TooGeneric">
+               <Item>'VSProjectItemManager.GetFileNamePrefix(string)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetItemByFullFileName(EnvDTE.ProjectItems,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'VSProjectItemManager.GetItemByFullFileName(ProjectItems, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetItemByFullFileName(EnvDTE.ProjectItems,System.String,System.Boolean)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'VSProjectItemManager.GetItemByFullFileName(ProjectItems, string, bool)'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2011-03-20 16:07:37Z">
+              <Issue Name="TooGeneric">
+               <Item>'VSProjectItemManager.GetItemByFullFileName(ProjectItems, string, bool)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SaveFile(System.String,System.Object)">
+            <Messages>
+             <Message Id="filename" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Created="2011-03-20 16:07:37Z">
+              <Issue Name="MemberParameterShouldBeCompoundWord">
+               <Item>'VSProjectItemManager.SaveFile(string, object)'</Item>
+               <Item>filename</Item>
+               <Item>'filename'</Item>
+               <Item>fileName</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Parameter">
+               <Item>'content'</Item>
+               <Item>'byte[]'</Item>
+               <Item>'VSProjectItemManager.SaveFile(string, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'content'</Item>
+               <Item>'string'</Item>
+               <Item>'VSProjectItemManager.SaveFile(string, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2011-03-20 16:07:37Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'VSProjectItemManager.SaveFile(string, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Zippy.Chirp.Threading">
+        <Types>
+         <Type Name="ServicePool">
+          <Messages>
+           <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Created="2011-03-20 16:07:37Z">
+            <Issue Name="ProvideDisposeBool">
+             <Item>'ServicePool'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#.ctor(System.Threading.ThreadStart,System.Int32)">
+            <Messages>
+             <Message Id="num" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="MemberParameter">
+               <Item>'ServicePool.ServicePool(ThreadStart, int)'</Item>
+               <Item>num</Item>
+               <Item>'numThreads'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#.ctor(System.Threading.ThreadStart,System.Int32,System.String,System.Threading.ThreadPriority)">
+            <Messages>
+             <Message Id="num" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="MemberParameter">
+               <Item>'ServicePool.ServicePool(ThreadStart, int, string, ThreadPriority)'</Item>
+               <Item>num</Item>
+               <Item>'numThreads'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Dispose()">
+            <Messages>
+             <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Created="2011-03-20 16:07:37Z">
+              <Issue Name="NotCalled">
+               <Item>'ServicePool.Dispose()'</Item>
+               <Item>'GC.SuppressFinalize(object)'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Created="2011-03-20 16:07:37Z">
+              <Issue Name="DisposeImplementation">
+               <Item>'ServicePool.Dispose()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ServiceQueue`1">
+          <Messages>
+           <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Created="2011-03-20 16:07:37Z">
+            <Issue Name="TypeNoAlternate">
+             <Item>'ServiceQueue&lt;T&gt;'</Item>
+             <Item>Queue</Item>
+            </Issue>
+           </Message>
+           <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Created="2011-03-20 16:07:37Z">
+            <Issue Name="ProvideDisposeBool">
+             <Item>'ServiceQueue&lt;T&gt;'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#.ctor(System.Action`1&lt;!0&gt;,System.Action`2&lt;!0,System.Exception&gt;,System.Nullable`1&lt;System.Int32&gt;,System.String,System.Threading.ThreadPriority)">
+            <Messages>
+             <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'ServiceQueue&lt;T&gt;.ServiceQueue(Action&lt;T&gt;, Action&lt;T, Exception&gt;, int?, string, ThreadPriority)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="num" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="MemberParameter">
+               <Item>'ServiceQueue&lt;T&gt;.ServiceQueue(Action&lt;T&gt;, Action&lt;T, Exception&gt;, int?, string, ThreadPriority)'</Item>
+               <Item>num</Item>
+               <Item>'numThreads'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Dispose()">
+            <Messages>
+             <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Created="2011-03-20 16:07:37Z">
+              <Issue Name="NotCalled">
+               <Item>'ServiceQueue&lt;T&gt;.Dispose()'</Item>
+               <Item>'GC.SuppressFinalize(object)'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Created="2011-03-20 16:07:37Z">
+              <Issue Name="DisposeImplementation">
+               <Item>'ServiceQueue&lt;T&gt;.Dispose()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Enqueue(System.Collections.Generic.IEnumerable`1&lt;!0&gt;)">
+            <Messages>
+             <Message Id="objs" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="MemberParameter">
+               <Item>'ServiceQueue&lt;T&gt;.Enqueue(IEnumerable&lt;T&gt;)'</Item>
+               <Item>objs</Item>
+               <Item>'objs'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Error(!0,System.Exception)">
+            <Messages>
+             <Message Id="Error" TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>'ServiceQueue&lt;T&gt;.Error(T, Exception)'</Item>
+               <Item>Error</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ProcessQueue()">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Local">
+               <Item>'obj'</Item>
+               <Item>'IDisposable'</Item>
+               <Item>'ServiceQueue&lt;T&gt;.ProcessQueue()'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'ServiceQueue&lt;T&gt;.ProcessQueue()'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Wait(System.Int32,System.Action)">
+            <Messages>
+             <Message Id="waitInterval" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2011-03-20 16:07:37Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'waitInterval'</Item>
+               <Item>'ServiceQueue&lt;T&gt;.Wait(int, Action)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Zippy.Chirp.Xml">
+        <Types>
+         <Type Name="FileGroupXml">
+          <Members>
+           <Member Name="#.ctor(System.Xml.Linq.XElement)">
+            <Messages>
+             <Message Id="x" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="MemberParameter">
+               <Item>'FileGroupXml.FileGroupXml(XElement)'</Item>
+               <Item>x</Item>
+               <Item>'xElement'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#.ctor(System.Xml.Linq.XElement,System.String)">
+            <Messages>
+             <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2011-03-20 16:07:37Z">
+              <Issue Name="TooGeneric">
+               <Item>'FileGroupXml.FileGroupXml(XElement, string)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+             <Message Id="x" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="MemberParameter">
+               <Item>'FileGroupXml.FileGroupXml(XElement, string)'</Item>
+               <Item>x</Item>
+               <Item>'xElement'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Files">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'FileGroupXml.Files'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="FileXml">
+          <Members>
+           <Member Name="#.ctor(System.Xml.Linq.XElement)">
+            <Messages>
+             <Message Id="x" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="MemberParameter">
+               <Item>'FileXml.FileXml(XElement)'</Item>
+               <Item>x</Item>
+               <Item>'xElement'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#.ctor(System.Xml.Linq.XElement,System.String)">
+            <Messages>
+             <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2011-03-20 16:07:37Z">
+              <Issue Name="TooGeneric">
+               <Item>'FileXml.FileXml(XElement, string)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+             <Message Id="x" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="MemberParameter">
+               <Item>'FileXml.FileXml(XElement, string)'</Item>
+               <Item>x</Item>
+               <Item>'xElement'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="FolderXml">
+          <Members>
+           <Member Name="#.ctor(System.Xml.Linq.XElement)">
+            <Messages>
+             <Message Id="x" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="MemberParameter">
+               <Item>'FolderXml.FolderXml(XElement)'</Item>
+               <Item>x</Item>
+               <Item>'xElement'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#.ctor(System.Xml.Linq.XElement,System.String)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'FolderXml.FolderXml(XElement, string)'</Item>
+               <Item>'object'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2011-03-20 16:07:37Z">
+              <Issue Name="TooGeneric">
+               <Item>'FolderXml.FolderXml(XElement, string)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+             <Message Id="x" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="MemberParameter">
+               <Item>'FolderXml.FolderXml(XElement, string)'</Item>
+               <Item>x</Item>
+               <Item>'xElement'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.String.StartsWith(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'FolderXml.FolderXml(XElement, string)'</Item>
+               <Item>'string.StartsWith(string)'</Item>
+               <Item>'string.StartsWith(string, StringComparison)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#FileXmlList">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Created="2011-03-20 16:07:37Z">
+              <Issue>
+               <Item>'FolderXml.FileXmlList'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="MinifyType">
+          <Members>
+           <Member Name="#gctAdvanced">
+            <Messages>
+             <Message Id="gct" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>gct</Item>
+               <Item>'MinifyType.gctAdvanced'</Item>
+               <Item>Gct</Item>
+              </Issue>
+             </Message>
+             <Message Id="gct" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>gct</Item>
+               <Item>'MinifyType.gctAdvanced'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#gctSimple">
+            <Messages>
+             <Message Id="gct" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>gct</Item>
+               <Item>'MinifyType.gctSimple'</Item>
+               <Item>Gct</Item>
+              </Issue>
+             </Message>
+             <Message Id="gct" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>gct</Item>
+               <Item>'MinifyType.gctSimple'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#gctWhiteSpaceOnly">
+            <Messages>
+             <Message Id="gct" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>gct</Item>
+               <Item>'MinifyType.gctWhiteSpaceOnly'</Item>
+               <Item>Gct</Item>
+              </Issue>
+             </Message>
+             <Message Id="gct" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>gct</Item>
+               <Item>'MinifyType.gctWhiteSpaceOnly'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#jsBeautifier">
+            <Messages>
+             <Message Id="js" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>js</Item>
+               <Item>'MinifyType.jsBeautifier'</Item>
+               <Item>JS</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#msAjax">
+            <Messages>
+             <Message Id="ms" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>ms</Item>
+               <Item>'MinifyType.msAjax'</Item>
+               <Item>MS</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#uglify">
+            <Messages>
+             <Message Id="uglify" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>uglify</Item>
+               <Item>'MinifyType.uglify'</Item>
+               <Item>Uglify</Item>
+              </Issue>
+             </Message>
+             <Message Id="uglify" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>uglify</Item>
+               <Item>'MinifyType.uglify'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#yui">
+            <Messages>
+             <Message Id="yui" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>yui</Item>
+               <Item>'MinifyType.yui'</Item>
+               <Item>Yui</Item>
+              </Issue>
+             </Message>
+             <Message Id="yui" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>yui</Item>
+               <Item>'MinifyType.yui'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#yuiHybrid">
+            <Messages>
+             <Message Id="yui" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>yui</Item>
+               <Item>'MinifyType.yuiHybrid'</Item>
+               <Item>Yui</Item>
+              </Issue>
+             </Message>
+             <Message Id="yui" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>yui</Item>
+               <Item>'MinifyType.yuiHybrid'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#yuiMARE">
+            <Messages>
+             <Message Id="MARE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>MARE</Item>
+               <Item>'MinifyType.yuiMARE'</Item>
+               <Item>Mare</Item>
+              </Issue>
+             </Message>
+             <Message Id="yui" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>yui</Item>
+               <Item>'MinifyType.yuiMARE'</Item>
+               <Item>Yui</Item>
+              </Issue>
+             </Message>
+             <Message Id="yui" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2011-03-20 16:07:37Z">
+              <Issue Name="Member">
+               <Item>yui</Item>
+               <Item>'MinifyType.yuiMARE'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+  </Targets>
+  <Rules>
+   <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+    <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020">
+    <Resolution Name="Default">Consider merging the types defined in '{0}' with another namespace.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811">
+    <Resolution Name="Default">{0} appears to have no upstream public or protected callers.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823">
+    <Resolution Name="Default">It appears that field {0} is never used or is only ever assigned to. Use this field or remove it.</Resolution>
+   </Rule>
+   <Rule TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816">
+    <Resolution Name="NotCalled">Change {0} to call {1}. This will prevent unnecessary finalization of the object once it has been disposed and it has fallen out of scope.</Resolution>
+   </Rule>
+   <Rule TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227">
+    <Resolution Name="Default">Change {0} to be read-only by removing the property setter.</Resolution>
+   </Rule>
+   <Rule TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405">
+    <Resolution Name="Default">{0} is marked ComVisible(true) but has the following ComVisible(false) types in its object hierarchy: {1}</Resolution>
+   </Rule>
+   <Rule TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702">
+    <Resolution Name="MemberParameterShouldBeCompoundWord">In member {0}, the discrete term '{1}' in parameter name {2} should be expressed as a compound word, '{3}'.</Resolution>
+    <Resolution Name="MemberShouldBeCompoundWord">The discrete term '{0}' in member name {1} should be expressed as a compound word, '{2}'.</Resolution>
+    <Resolution Name="MemberShouldBeDiscreteTerm">The compound word '{0}' in member name {1} exists as a discrete term. If your usage is intended to be single word, case it as '{2}' or strip the first token entirely if it represents any sort of Hungarian notation.</Resolution>
+    <Resolution Name="TypeShouldBeCompoundWord">The discrete term '{0}' in type name {1} should be expressed as a compound word, '{2}'.</Resolution>
+   </Rule>
+   <Rule TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009">
+    <Resolution Name="First">Declare the first parameter of {0} as an object named 'sender'.</Resolution>
+    <Resolution Name="Second">Declare the second parameter of {0} as an EventArgs, or an instance of a type that extends EventArgs, named 'e'.</Resolution>
+   </Rule>
+   <Rule TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026">
+    <Resolution Name="Default">Replace method {0} with an overload that supplies all default arguments.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214">
+    <Resolution Name="Default">{0} contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: {1}</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800">
+    <Resolution Name="Local">{0}, a variable, is cast to type {1} multiple times in method {2}. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant {3} instruction.</Resolution>
+    <Resolution Name="Parameter">{0}, a parameter, is cast to type {1} multiple times in method {2}. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant {3} instruction.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+    <Resolution Name="Default">Modify {0} to catch a more specific exception than {1} or rethrow the exception.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806">
+    <Resolution Name="HResultOrErrorCode">{0} calls {1} but does not use the HRESULT or error code that the method returns. This could lead to unexpected behavior in error conditions or low-resource situations. Use the result in a conditional statement, assign the result to a variable, or pass it as an argument to another method.</Resolution>
+    <Resolution Name="TryParse">{0} calls {1} but does not explicitly check whether the conversion succeeded. Either use the return value in a conditional statement or verify that the call site expects that the out argument will be set to the default value when the conversion fails.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122">
+    <Resolution Name="Default">{0} calls into {1} which has a LinkDemand. By making this call, {1} is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: {2}</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805">
+    <Resolution Name="Default">{0} initializes field {1} of type {2} to {3}. Remove this initialization because it will be done automatically by the runtime.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotPassTypesByReference" Category="Microsoft.Design" CheckId="CA1045">
+    <Resolution Name="Default">Consider a design that does not require that {0} be a reference parameter.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201">
+    <Resolution Name="TooGeneric">{0} creates an exception of type {1}, an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+    <Resolution Name="Member">Correct the casing of '{0}' in member name {1} by changing it to '{2}'.</Resolution>
+    <Resolution Name="Type">Correct the casing of '{0}' in type name {1} by changing it to '{2}'.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+    <Resolution Name="Member">Correct the spelling of '{0}' in member name {1} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+    <Resolution Name="MemberMoreMeaningfulName">Consider providing a more meaningful name than member name {0}.</Resolution>
+    <Resolution Name="MemberParameter">In method {0}, correct the spelling of '{1}' in parameter name {2} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+    <Resolution Name="MemberParameterMoreMeaningfulName">In method {0}, consider providing a more meaningful name than parameter name {1}.</Resolution>
+    <Resolution Name="Type">Correct the spelling of '{0}' in type name {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710">
+    <Resolution Name="Default">Rename {0} to end in '{1}'.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720">
+    <Resolution Name="LanguageSpecificMember">Consider replacing the language-specific data type identifier '{0}' in member name {1} with either a language-independent equivalent or a more generic term, such as 'value'.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707">
+    <Resolution Name="Member">Remove the underscores from member name {0}.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711">
+    <Resolution Name="TypeNoAlternate">Rename type name {0} so that it does not end in '{1}'.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716">
+    <Resolution Name="Member">Rename virtual/interface member {0} so that it no longer conflicts with the reserved language keyword '{1}'. Using a reserved keyword as the name of a virtual/interface member makes it harder for consumers in other languages to override/implement the member.</Resolution>
+   </Rule>
+   <Rule TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063">
+    <Resolution Name="DisposeImplementation">Modify {0} so that it calls Dispose(true), then calls GC.SuppressFinalize on the current object instance ('this' or 'Me' in Visual Basic), and then returns.</Resolution>
+    <Resolution Name="DisposeSignature">Ensure that {0} is declared as public and sealed.</Resolution>
+    <Resolution Name="ProvideDisposeBool">Provide an overridable implementation of Dispose(bool) on {0} or mark the type as sealed. A call to Dispose(false) should only clean up native resources. A call to Dispose(true) should clean up both managed and native resources.</Resolution>
+   </Rule>
+   <Rule TypeName="ImplementStandardExceptionConstructors" Category="Microsoft.Design" CheckId="CA1032">
+    <Resolution Name="MissingConstructor">Add the following constructor to {0}: {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="InitializeReferenceTypeStaticFieldsInline" Category="Microsoft.Performance" CheckId="CA1810">
+    <Resolution Name="Default">Initialize all static fields in {0} when those fields are declared and remove the explicit static constructor.</Resolution>
+   </Rule>
+   <Rule TypeName="InstantiateArgumentExceptionsCorrectly" Category="Microsoft.Usage" CheckId="CA2208">
+    <Resolution Name="IncorrectParameterName">Method {0} passes '{1}' as the {2} argument to a {3} constructor. Replace this argument with one of the method's parameter names. Note that the provided parameter name should have the exact casing as declared on the method.</Resolution>
+   </Rule>
+   <Rule TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033">
+    <Resolution Name="Default">Make {0} sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of {1} and is visible to derived classes.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+    <Resolution Name="Default">Mark {0} with CLSCompliant(true) because it exposes externally visible types.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkAssembliesWithComVisible" Category="Microsoft.Design" CheckId="CA1017">
+    <Resolution Name="AttributeTrue">Consider changing the ComVisible attribute on {0} to false, and opting in at the type level.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237">
+    <Resolution Name="Default">Add [Serializable] to {0} as this type implements ISerializable.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822">
+    <Resolution Name="Default">The 'this' parameter (or 'Me' in Visual Basic) of {0} is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Resolution>
+   </Rule>
+   <Rule TypeName="OperationsShouldNotOverflow" Category="Microsoft.Usage" CheckId="CA2233">
+    <Resolution Name="Default">Correct the potential overflow in the operation '{0}' in {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725">
+    <Resolution Name="Default">In member {0}, change parameter name {1} to {2} in order to match the identifier as it has been declared in {3}.</Resolution>
+   </Rule>
+   <Rule TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819">
+    <Resolution Name="Default">Change {0} to return a collection or make it a method.</Resolution>
+   </Rule>
+   <Rule TypeName="PropertyNamesShouldNotMatchGetMethods" Category="Microsoft.Naming" CheckId="CA1721">
+    <Resolution Name="SameType">The property name {0} is confusing given the existence of method {1}. Rename or remove one of these members.</Resolution>
+   </Rule>
+   <Rule TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804">
+    <Resolution Name="Default">{0} declares a variable, {1}, of type {2}, which is never used or is only assigned to. Use this variable or remove it.</Resolution>
+   </Rule>
+   <Rule TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801">
+    <Resolution Name="Default">Parameter {0} of {1} is never used. Remove the parameter or use it in the method body.</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304">
+    <Resolution Name="Default">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+    <Resolution Name="Default">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300">
+    <Resolution Name="Default">Change {0} to call the MessageBox.Show overload that specifies MessageBoxOptions, and make sure to set MessageBoxOptions.RightAlign and MessageBoxOptions.RtlReading if RightToLeft is set to RightToLeft.Yes on the parent control.</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307">
+    <Resolution Name="Default">{0} makes a call to {1} that does not explicitly provide a StringComparison. This should be replaced with a call to {2}.</Resolution>
+   </Rule>
+   <Rule TypeName="StaticHolderTypesShouldBeSealed" Category="Microsoft.Design" CheckId="CA1052">
+    <Resolution Name="Default">Mark {0} as sealed.</Resolution>
+   </Rule>
+   <Rule TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053">
+    <Resolution Name="Default">Remove the public constructors from {0}.</Resolution>
+   </Rule>
+   <Rule TypeName="TypeNamesShouldNotMatchNamespaces" Category="Microsoft.Naming" CheckId="CA1724">
+    <Resolution Name="Default">The type name {0} conflicts in whole or in part with the namespace name '{1}'. Change either name to eliminate the conflict.</Resolution>
+   </Rule>
+   <Rule TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001">
+    <Resolution Name="DependsOnFix">Implement IDisposable on {0} because it creates members of the following IDisposable types: {1}. If {0} has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Resolution>
+   </Rule>
+   <Rule TypeName="UseOrdinalStringComparison" Category="Microsoft.Globalization" CheckId="CA1309">
+    <Resolution Name="StringComparer">{0} passes {1} as an argument to {2}. Replace this usage with StringComparer.Ordinal or StringComparer.OrdinalIgnoreCase if appropriate.</Resolution>
+    <Resolution Name="StringComparison">{0} passes {1} as an argument to {2}. Replace this usage with StringComparison.Ordinal or StringComparison.OrdinalIgnoreCase if appropriate.</Resolution>
+   </Rule>
+  </Rules>
+ </FxCopReport>
+</FxCopProject>

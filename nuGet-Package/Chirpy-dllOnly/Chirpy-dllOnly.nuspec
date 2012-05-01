@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <version>2.0.0.3</version>
+    <authors>Evan Nagle,Wayne Brantley,Francis Noel</authors>
+    <owners>Evan Nagle,Wayne Brantley,Francis Noel</owners>
+    <licenseUrl>http://chirpy.codeplex.com/license</licenseUrl>
+    <projectUrl>http://chirpy.codeplex.com/</projectUrl>
+    <dependencies>
+      <dependency id="IronRuby" version="1.1.3" />
+    </dependencies>
+    <id>ChirpyDllOnly</id>
+    <title>Chirpy (DLL only)</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Mashes, minifies (Google Closure Tools, YUI Compressor for .Net, Ajax Minifier, or Uglify.js), and validates your javascript (JsHint), stylesheet (CSSLint), and dotless files.</description>
+    <copyright>Copyright 2011</copyright>
+    <tags>CSSLint Less JsHint Minifier Closure Uglify T4Mvc</tags>
+  </metadata>
+  <files>
+    <file src="lib\Chirpy.dll" target="lib\Chirpy.dll" />
+	<file src="lib\SassAndCoffee.Core.dll" target="lib\SassAndCoffee.Core.dll" />
+  </files>
+</package>

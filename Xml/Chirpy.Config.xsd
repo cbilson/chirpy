@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copy file to C:\Program Files\Microsoft Visual Studio 10.0\Xml\Schemas
+in config file add in node root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:ChirpyConfig"
+-->
+<xs:schema targetNamespace="urn:ChirpyConfig"  id="root"  xmlns="urn:ChirpyConfig" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Settings">
+          <xs:complexType>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="Setting">
+                <xs:complexType>
+                  <xs:attribute name="key" use="required" type="xs:string" />
+                  <!-- Possible keys and their defaults (copied from Settings.cs) 
+                  ChirpJsFile = ".chirp.js";
+                  ChirpSimpleJsFile = ".simple.js";
+                  ChirpWhiteSpaceJsFile = ".whitespace.js";
+                  ChirpYuiJsFile = ".yui.js";
+                  ChirpGctJsFile = ".gct.js";
+                  ChirpMsAjaxJsFile = ".msajax.js";
+                  ChirpPartialViewFile = ".chirp.ascx";
+                  ChirpViewFile = ".chirp.aspx";
+                  ChirpRazorCsViewFile = ".chirp.cshtml";
+                  ChirpRazorVbViewFile = ".chirp.vbhtml";
+                  ChirpLessFile = ".chirp.less";
+                  ChirpMsAjaxLessFile = ".msajax.less";
+                  ChirpHybridLessFile = ".hybrid.less";
+                  ChirpMichaelAshLessFile = ".michaelash.less";
+                  ChirpUglifyJsFile = ".uglify.js";
+                  ChirpCoffeeScriptFile = ".chirp.coffee";
+                  ChirpSimpleCoffeeScriptFile = ".simple.coffee";
+                  ChirpWhiteSpaceCoffeeScriptFile = ".whitespace.coffee";
+                  ChirpYuiCoffeeScriptFile = ".yui.coffee";
+                  ChirpGctCoffeeScriptFile = ".gct.coffee";
+                  ChirpMsAjaxCoffeeScriptFile = ".msajax.coffee";
+                  ChirpUglifyCoffeeScriptFile = ".uglify.coffee";
+                  CoffeeScriptBatFilePath = string.Empty;
+                  ChirpCssFile = ".chirp.css";
+                  ChirpMsAjaxCssFile = ".msajax.css";
+                  ChirpHybridCssFile = ".hybrid.css";
+                  ChirpMichaelAshCssFile = ".michaelash.css";
+                  ChirpConfigFile = ".chirp.config";
+                  DefaultCssMinifier = MinifyType.yui;
+                  DefaultJavaScriptMinifier = MinifyType.yui;
+                  T4RunAsBuild = false;
+                  T4RunAsBuildTemplate = string.Empty;
+                  SmartRunT4Mvc = false;
+                  RunJsHint = true;
+                  ShowDetailLog = true;
+                  GoogleClosureJavaPath = string.Empty;
+                  GoogleClosureOffline = false;
+                  -->
+                  <xs:attribute name="value" use="required" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FileGroup">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:choice maxOccurs="unbounded">
+                <xs:element name="File" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="Path" use="required" type="xs:string" />
+                        <xs:attribute name="Minify" type="MinifyAction" />
+                        <xs:attribute name="MinifyWith" type="MinifyType" />
+                        <xs:attribute name="CustomArgument" type="xs:string" />
+                        <xs:attribute name="Find" type="xs:string" />
+                        <xs:attribute name="Replace" type="xs:string" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Raw" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="Type" type="CodeType" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Folder" minOccurs="0" maxOccurs="unbounded">
+                  <xs:complexType>
+                    <xs:attribute name="Pattern" use="required" type="xs:string" />
+                    <xs:attribute name="Minify" type="MinifyAction" />
+                    <xs:attribute name="Deep" type="xs:boolean" />
+                    <xs:attribute name="Find" type="xs:string" />
+                    <xs:attribute name="Replace" type="xs:string" />
+                  </xs:complexType>
+                </xs:element>
+              </xs:choice>
+            </xs:sequence>
+            <xs:attribute name="Name" type="xs:string" />
+            <xs:attribute name="Path" type="xs:string" />
+            <xs:attribute name="Minify" type="MinifyAction" />
+            <xs:attribute name="Debug" type="xs:boolean" />
+            <xs:attribute name="Find" type="xs:string" />
+            <xs:attribute name="Replace" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+    <xs:simpleType name="MinifyType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="yui" />
+            <xs:enumeration value="yuiMARE" />
+            <xs:enumeration value="yuiHybrid" />
+            <xs:enumeration value="gctAdvanced" />
+            <xs:enumeration value="gctSimple" />
+            <xs:enumeration value="gctWhiteSpaceOnly" />
+            <xs:enumeration value="msAjax" />
+            <xs:enumeration value="uglify" />
+            <xs:enumeration value="jsBeautifier" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="MinifyAction">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="true" />
+            <xs:enumeration value="false" />
+            <xs:enumeration value="both" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="CodeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="CSS" />
+            <xs:enumeration value="JS" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

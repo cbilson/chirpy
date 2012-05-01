@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <version>2.0.0.3</version>
+    <authors>Evan Nagle, Wayne Brantley, Francis Noel</authors>
+    <owners>Evan Nagle, Wayne Brantley, Francis Noel</owners>
+    <licenseUrl>http://chirpy.codeplex.com/license</licenseUrl>
+    <projectUrl>http://chirpy.codeplex.com/</projectUrl>
+    <id>ChirpyVSI</id>
+    <title>Chirpy (SETUP)</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Mashes, minifies (Google Closure Tools, YUI Compressor for .Net, Ajax Minifier, or Uglify.js), and validates your javascript (JsHint), stylesheet (CSSLint), and dotless files. | Please install with chocolatey (http://nuget.org/List/Packages/chocolatey). </description>
+   <tags>CSSLint Less JsHint Minifier Closure Uglify T4Mvc chocolatey</tags>
+  </metadata>
+  <files>
+    <file src="content\Chirpy.ReadMe.txt" target="content\Chirpy.ReadMe.txt" />
+    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+    <file src="tools\install.ps1" target="tools\install.ps1" />
+  </files>
+</package>

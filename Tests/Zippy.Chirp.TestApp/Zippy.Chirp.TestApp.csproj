@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C1702BF4-046F-4DE0-A0FF-C98646311BD7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Zippy.Chirp.TestApp</RootNamespace>
+    <AssemblyName>Zippy.Chirp.TestApp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\a.chirp.js" />
+    <Content Include="Scripts\a.min.js">
+      <DependentUpon>a.chirp.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\b.min.js">
+      <DependentUpon>b.whitespace.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\b.whitespace.js" />
+    <Content Include="Scripts\c.min.js">
+      <DependentUpon>c.yui.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\c.yui.js" />
+    <Content Include="Scripts\d.min.js">
+      <DependentUpon>d.simple.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\d.simple.js" />
+    <Content Include="Scripts\e.gc.js" />
+    <Content Include="Scripts\e.min.js">
+      <DependentUpon>e.gc.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery-1.3.2-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.3.2.js" />
+    <Content Include="Scripts\jquery-1.3.2.min-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.3.2.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\x.js">
+      <DependentUpon>js.chirp.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\z.js">
+      <DependentUpon>js.chirp.config</DependentUpon>
+    </Content>
+    <Content Include="Styles\a.chirp.css" />
+    <Content Include="Styles\a.min.css">
+      <DependentUpon>a.chirp.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\b.chirp.css">
+      <DependentUpon>b.chirp.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\b.min.css">
+      <DependentUpon>b.chirp.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\c.chirp.css">
+      <DependentUpon>c.chirp.less.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\c.min.css">
+      <DependentUpon>c.chirp.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\error-a.chirp.css">
+      <DependentUpon>error-a.chirp.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\error-a.min.css">
+      <DependentUpon>error-a.chirp.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\error-b.chirp.css">
+      <DependentUpon>error-b.chirp.less.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\error-b.chirp.less.css" />
+    <Content Include="Styles\error-b.chirp.min.css">
+      <DependentUpon>error-b.chirp.less.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\error-b.min.css">
+      <DependentUpon>error-b.chirp.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\flat.css" />
+    <Content Include="Styles\Images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Styles\Images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Styles\Images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Styles\Images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Styles\Images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Styles\Images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Styles\Images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Styles\Images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Styles\Images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Styles\Images\ui-icons_222222_256x240.png" />
+    <Content Include="Styles\Images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Styles\Images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Styles\Images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Styles\Images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Styles\import.css" />
+    <Content Include="Styles\jquery-ui-1.8.1.custom.css" />
+    <Content Include="Styles\x.css">
+      <DependentUpon>styles.chirp.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\js.chirp.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Styles\b.chirp.less" />
+    <Content Include="Styles\c.chirp.less.css" />
+    <None Include="Styles\error-a.chirp.less" />
+    <None Include="Styles\styles.chirp.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
