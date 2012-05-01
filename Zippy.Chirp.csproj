@@ -392,16 +392,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="JavaScript\Scripts\beautify.js" />
-    <Content Include="JavaScript\Scripts\browser.js" />
-    <Content Include="JavaScript\Scripts\coffee-script.js" />
-    <Content Include="JavaScript\Scripts\csslint.js" />
-    <Content Include="JavaScript\Scripts\env.js" />
-    <Content Include="JavaScript\Scripts\jshint.js" />
-    <Content Include="JavaScript\Scripts\parse-js.js" />
-    <Content Include="JavaScript\Scripts\process.js" />
-    <Content Include="JavaScript\Scripts\squeeze-more.js" />
-    <Content Include="JavaScript\Scripts\uglify-js.js" />
+    <EmbeddedResource Include="JavaScript\Scripts\beautify.js" />
+    <EmbeddedResource Include="JavaScript\Scripts\browser.js" />
+    <EmbeddedResource Include="JavaScript\Scripts\coffee-script.js" />
+    <EmbeddedResource Include="JavaScript\Scripts\csslint.js" />
+    <EmbeddedResource Include="JavaScript\Scripts\env.js" />
+    <EmbeddedResource Include="JavaScript\Scripts\jshint.js" />
+    <EmbeddedResource Include="JavaScript\Scripts\parse-js.js" />
+    <EmbeddedResource Include="JavaScript\Scripts\process.js" />
+    <EmbeddedResource Include="JavaScript\Scripts\squeeze-more.js" />
+    <EmbeddedResource Include="JavaScript\Scripts\uglify-js.js" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
   <PropertyGroup>

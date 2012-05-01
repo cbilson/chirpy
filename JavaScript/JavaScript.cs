@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices;
 
 namespace Zippy.Chirp.JavaScript {
@@ -86,13 +88,25 @@ namespace Zippy.Chirp.JavaScript {
             return uri.ToString();
         }
 
+// ReSharper disable UnusedMember.Global
+        // this is called back from the javascript host
         public string Download(string path) {
+// ReSharper restore UnusedMember.Global
             var uri = GetFullUri(path).ToUri();
             string file;
             if (uri.IsFile) {
                 file = uri.LocalPath;
 
             } else {
+                var executingAssembly = System.Reflection.Assembly.GetExecutingAssembly();
+                var manifestResourceNames = executingAssembly.GetManifestResourceNames();
+                var fileName = Path.GetFileName(uri.LocalPath);
+                var resourceName = manifestResourceNames.FirstOrDefault(x => x.EndsWith(fileName));
+                if (resourceName != null)
+                    using (var stm = executingAssembly.GetManifestResourceStream(resourceName))
+                    using (var rdr = new StreamReader(stm))
+                        return rdr.ReadToEnd();
+                        
                 file = null;
                 Extensibility.Instance.Download(uri, ref file);
             }
