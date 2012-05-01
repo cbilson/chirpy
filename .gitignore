@@ -1,18 +1,9 @@
-syntax: glob
-
-*\_UpgradeReport_Files\*
-*\_vti_*
 *.suo
 *.user
 *.FileListAbsolute.txt
-*\bin\*
-*\sql\debug\*
-*\sql\release\*
-temp\*
-*\Published\*
-*\favicon\*
-*\obj\*
-*\Cache\*
+bin
+temp
+obj
 *.dbmdl
 *.Publish.xml
 *.schemaview
@@ -47,3 +38,10 @@ _ReSharper*\*
 error-*.xml
 TestResults\*
 *.vsp
+AjaxMin.4.48.4489.28432/
+IronRuby.1.1.3/
+Jurassic.2.1.1/
+YUICompressor.NET.1.7.1.0/
+dotless.1.3.0.0/
+packages/
+Zippy.Setup.VS10/Chirpy.dll
